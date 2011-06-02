@@ -1,0 +1,4787 @@
+\documentclass[10pt]{article}
+\usepackage{fullpage, graphicx, url}
+\setlength{\parskip}{1ex}
+\setlength{\parindent}{0ex}
+\title{}
+
+%    p.p1 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Times; min-height: 14.0px\}
+%    p.p2 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 11.0px; font: 48.0px Helvetica\}
+%    p.p3 \{margin: 0.0px 0.0px 6.0px 0.0px; line-height: 12.0px; font: 14.0px Helvetica\}
+%    p.p4 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 12.0px Helvetica\}
+%    p.p5 \{margin: 0.0px 0.0px 6.0px 0.0px; text-align: right; line-height: 12.0px; font: 14.0px Helvetica\}
+%    p.p6 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 12.0px Helvetica; min-height: 14.0px\}
+%    p.p7 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica\}
+%    p.p8 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p9 \{margin: 0.0px 0.0px 0.0px 4.5px; text-align: justify; text-indent: -4.5px; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p10 \{margin: 0.0px 0.0px 0.0px 4.5px; text-indent: -4.5px; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p11 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 12.0px; font: 7.0px Helvetica\}
+%    p.p12 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 7.0px Helvetica\}
+%    p.p13 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 7.0px Helvetica; min-height: 8.0px\}
+%    p.p14 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 9.0px Helvetica\}
+%    p.p15 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 12.0px; font: 9.0px Helvetica\}
+%    p.p16 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 60.0px Helvetica\}
+%    p.p17 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; line-height: 24.0px; font: 11.5px Helvetica; color: \#238ea6\}
+%    p.p18 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 1.0px Helvetica\}
+%    p.p19 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 1.0px Helvetica\}
+%    p.p20 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 24.0px; font: 1.0px Helvetica\}
+%    p.p21 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 22.0px; font: 1.0px Helvetica\}
+%    p.p22 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 1.0px Helvetica\}
+%    p.p23 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 1.0px Helvetica\}
+%    p.p24 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 1.0px Helvetica; min-height: 1.0px\}
+%    p.p25 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 32.0px Helvetica\}
+%    p.p26 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 11.0px Helvetica\}
+%    p.p27 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 14.0px; font: 11.0px Helvetica; min-height: 13.0px\}
+%    p.p28 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 12.0px; font: 18.0px Helvetica\}
+%    p.p29 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 12.0px; font: 14.0px Helvetica\}
+%    p.p30 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 60.0px Helvetica; color: \#ffffff\}
+%    p.p31 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 11.5px Helvetica; color: \#238ea6\}
+%    p.p32 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 24.0px; font: 24.0px Helvetica\}
+%    p.p33 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 9.0px Helvetica; min-height: 11.0px\}
+%    p.p34 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 12.0px; font: 18.0px Helvetica\}
+%    p.p35 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 12.0px; font: 18.0px Helvetica; min-height: 22.0px\}
+%    p.p36 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p37 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 12.0px Helvetica; min-height: 14.0px\}
+%    p.p38 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 10.0px Helvetica; color: \#ffffff\}
+%    p.p39 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 12.0px; font: 9.0px Helvetica; min-height: 11.0px\}
+%    p.p40 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 24.0px; font: 18.0px Helvetica; color: \#ffffff\}
+%    p.p41 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p42 \{margin: 0.0px 0.0px 2.1px 7.0px; text-indent: -7.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p43 \{margin: 0.0px 0.0px 0.0px 7.0px; text-indent: -7.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    p.p44 \{margin: 0.0px 0.0px 2.0px 7.0px; text-indent: -7.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p45 \{margin: 0.0px 0.0px 2.0px 7.0px; text-indent: -7.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    p.p46 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 12.0px; font: 18.0px Helvetica; color: \#ffffff\}
+%    p.p47 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 12.0px; font: 9.5px Helvetica; min-height: 11.0px\}
+%    p.p48 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p49 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 8.0px Helvetica; color: \#238ea6; min-height: 10.0px\}
+%    p.p50 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 8.5px Helvetica; color: \#ffffff\}
+%    p.p51 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 12.0px; font: 18.0px Helvetica; color: \#ffffff\}
+%    p.p52 \{margin: 0.0px 0.0px 0.0px 18.0px; text-align: justify; text-indent: -9.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p53 \{margin: 0.0px 0.0px 0.0px 18.0px; text-align: justify; text-indent: -9.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    p.p54 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: right; line-height: 24.0px; font: 11.5px Helvetica; color: \#ba1b21\}
+%    p.p55 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 18.0px Helvetica\}
+%    p.p56 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 8.5px Helvetica\}
+%    p.p57 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 11.0px; font: 8.5px Helvetica\}
+%    p.p58 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 11.0px; font: 8.5px Helvetica; min-height: 11.0px\}
+%    p.p59 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 22.0px; font: 22.0px Helvetica\}
+%    p.p60 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 11.0px; font: 18.0px Helvetica\}
+%    p.p61 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 11.0px; font: 11.0px Helvetica\}
+%    p.p62 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 8.5px Helvetica; min-height: 11.0px\}
+%    p.p63 \{margin: 0.0px 0.0px 0.0px 13.5px; text-align: justify; text-indent: -9.0px; line-height: 11.0px; font: 8.5px Helvetica\}
+%    p.p64 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 11.0px; font: 8.5px Helvetica; color: \#fa1412; min-height: 11.0px\}
+%    p.p65 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 8.0px Helvetica; color: \#ba1b21\}
+%    p.p66 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 11.0px; font: 8.0px Helvetica; color: \#ba1b21\}
+%    p.p67 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 12.0px; font: 9.0px Helvetica\}
+%    p.p68 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 9.0px Helvetica; color: \#ba1b21; min-height: 11.0px\}
+%    p.p69 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 8.5px Helvetica; min-height: 11.0px\}
+%    p.p70 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 22.0px Helvetica\}
+%    p.p71 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 22.0px; font: 22.0px Helvetica\}
+%    p.p72 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 11.0px; font: 11.0px Helvetica\}
+%    p.p73 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 22.0px; font: 22.0px Helvetica\}
+%    p.p74 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p75 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 16.0px Helvetica; color: \#ffffff\}
+%    p.p76 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p77 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p78 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    p.p79 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 11.0px; font: 16.0px Helvetica; color: \#ffffff\}
+%    p.p80 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 12.0px; font: 9.0px Helvetica\}
+%    p.p81 \{margin: 0.0px 0.0px 0.0px 0.0px; font: 9.0px Helvetica; min-height: 11.0px\}
+%    p.p82 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: center; line-height: 11.0px; font: 16.0px Helvetica\}
+%    p.p83 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 11.0px; font: 8.0px Helvetica; color: \#ba1b21; min-height: 10.0px\}
+%    p.p84 \{margin: 0.0px 0.0px 0.0px 9.0px; text-align: justify; text-indent: -9.0px; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p85 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 8.0px Helvetica; color: \#ffffff\}
+%    p.p86 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 4.5px; line-height: 12.0px; font: 8.0px Helvetica\}
+%    p.p87 \{margin: 0.0px 0.0px 2.0px 0.0px; text-align: justify; line-height: 12.0px; font: 18.0px Helvetica; color: \#ffffff; min-height: 22.0px\}
+%    p.p88 \{margin: 0.0px 0.0px 0.0px 0.0px; line-height: 24.0px; font: 11.5px Helvetica; color: \#ba1b21\}
+%    p.p89 \{margin: 0.0px 0.0px 2.0px 0.0px; line-height: 12.0px; font: 12.0px Helvetica; color: \#ffffff\}
+%    p.p90 \{margin: 0.0px 0.0px 0.0px 4.5px; text-align: justify; text-indent: -4.5px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff\}
+%    p.p91 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    p.p92 \{margin: 0.0px 0.0px 0.0px 0.0px; text-align: justify; text-indent: 9.0px; line-height: 12.0px; font: 9.0px Helvetica; color: \#ffffff; min-height: 11.0px\}
+%    span.s1 \{letter-spacing: 4.8px\}
+%    span.s2 \{letter-spacing: -0.2px\}
+%    span.s3 \{letter-spacing: 0.9px\}
+%    span.s4 \{letter-spacing: 0.1px\}
+%    span.s5 \{letter-spacing: 1.2px\}
+%    span.s6 \{letter-spacing: 1.1px\}
+%    span.s7 \{letter-spacing: 0.6px\}
+%    span.s8 \{letter-spacing: -0.6px\}
+%    span.s9 \{letter-spacing: -0.1px\}
+%    span.s10 \{letter-spacing: 0.5px\}
+%    span.s11 \{letter-spacing: 0.2px\}
+%    span.s12 \{letter-spacing: -0.5px\}
+%    span.s13 \{color: \#238ea6\}
+%    span.s14 \{letter-spacing: -0.1px color: \#238ea6\}
+%    span.s15 \{letter-spacing: -0.3px\}
+%    span.s16 \{letter-spacing: 0.3px\}
+%    span.s17 \{color: \#fa1412\}
+%    span.Apple-tab-span \{white-space:pre\}
+%    table.t1 \{border-collapse: collapse\}
+%    td.td1 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 9.0px 9.0px 9.0px 9.0px\}
+%    td.td2 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#cbcbcb \#ba1b21 \#cbcbcb; padding: 4.0px 4.0px 4.0px 4.0px\}
+%    td.td3 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#cbcbcb \#ba1b21 \#cbcbcb\}
+%    td.td4 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#cbcbcb \#cbcbcb; padding: 4.0px 4.0px 8.0px 0.0px\}
+%    td.td5 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 4.0px 4.0px 4.5px 4.5px\}
+%    td.td6 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#ba1b21 \#000000; padding: 4.0px 4.0px 4.0px 4.0px\}
+%    td.td7 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#ba1b21 \#000000; padding: 4.0px 4.0px 4.0px 4.0px\}
+%    td.td8 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#cbcbcb \#cbcbcb; padding: 0.0px 0.0px 8.0px 0.0px\}
+%    td.td9 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 4.0px 4.0px 4.0px 4.0px\}
+%    td.td10 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 0.0px 0.0px 4.0px 4.0px\}
+%    td.td11 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#ba1b21 \#000000; padding: 4.0px 0.0px 3.4px 3.4px\}
+%    td.td12 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#ba1b21 \#000000; padding: 0.0px 0.0px 3.4px 3.4px\}
+%    td.td13 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#ba1b21 \#000000; padding: 4.0px 0.0px 3.4px 3.4px\}
+%    td.td14 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#ba1b21 \#000000; padding: 0.0px 0.0px 3.4px 3.4px\}
+%    td.td15 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#000000 \#000000; padding: 4.0px 0.0px 3.4px 3.4px\}
+%    td.td16 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#000000 \#000000; padding: 0.0px 0.0px 3.4px 3.4px\}
+%    td.td17 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#000000 \#000000 \#ba1b21 \#000000; padding: 4.0px 4.0px 3.4px 3.4px\}
+%    td.td18 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#000000 \#000000 \#ba1b21 \#000000; padding: 0.0px 4.5px 3.4px 3.4px\}
+%    td.td19 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#ba1b21 \#000000; padding: 4.0px 4.0px 3.4px 3.4px\}
+%    td.td20 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#ba1b21 \#000000; padding: 0.0px 4.5px 3.4px 3.4px\}
+%    td.td21 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#000000 \#000000; padding: 4.0px 4.0px 3.4px 3.4px\}
+%    td.td22 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#000000 \#000000; padding: 0.0px 4.5px 3.4px 3.4px\}
+%    td.td23 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#000000 \#000000 \#cbcbcb; padding: 0.0px 0.0px 8.0px 0.0px\}
+%    td.td24 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#cbcbcb \#000000; padding: 4.0px 0.0px 3.4px 3.4px\}
+%    td.td25 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#ba1b21 \#000000 \#cbcbcb \#000000; padding: 0.0px 0.0px 3.4px 3.4px\}
+%    td.td26 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 4.0px 0.0px 3.4px 3.4px\}
+%    td.td27 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 0.0px 0.0px 3.4px 3.4px\}
+%    td.td28 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb; padding: 4.0px 0.0px 0.0px 0.0px\}
+%    td.td29 \{border-style: solid; border-width: 1.0px 1.0px 1.0px 1.0px; border-color: \#cbcbcb \#cbcbcb \#cbcbcb \#cbcbcb\}
+  \begin{document}
+
+
+ QUICK-START RULES
+
+
+ \textbf{The System}
+
+
+
+ \^aÄ¢ 
+\emph{Eclipse Phase}
+ uses a d100/percentile system. It\^aÄôs fast, simple and streamlined so players can immerse themselves in the setting without being burdened by complex rules.
+
+
+ \^aÄ¢ 
+ Characters are skill-based, with no classes, but customizable templates provide recognizable roles and sample builds for new players.
+
+
+ \^aÄ¢ 
+ A unique set of mesh rules enables all characters to take advantage of information resources and ubiquitous networking and sensor technology via mental implants.
+
+
+ \textbf{For Players}
+
+
+
+ \^aÄ¢ 
+ Join Firewall, a cross-faction conspiracy that seeks to save transhumanity\^aÄîat any cost. Alternately, play a character 
+ with their own agenda.
+
+
+ \^aÄ¢ 
+ Switch your body at need, from genetically-modified transhumans to synthetic robotic shells, optimizing your form for specific missions.
+
+
+ \^aÄ¢ 
+ Back up your character\^aÄôs mind and be restored from backup in case of death\^aÄîa built-in system of \^aÄúsave points\^aÄù and near-immortality.
+
+
+ \textbf{For Gamemasters}
+
+
+
+ \^aÄ¢ 
+ The setting is our solar system in the post-Singularity future. Challenge your players with deadly political intrigues on Venus \& Mars, high-tech dungeon crawls aboard derelict space stations, mind-scarring encounters with alien enigmas, and dangerous exploration of worlds beyond our system via wormhole gates.
+
+
+ \^aÄ¢ 
+ Build stories with an eclectic assortment of intriguing factions, from techno-anarchists to ruthless hypercorps, soul-trading criminals to uplifted animals.
+
+
+ \^aÄ¢ 
+ Choose from a range of NPC antagonists, including rogue AIs and their mechanical servitors, vicious posthuman factions, alien merchants with an unknown agenda, and transhumans infected and transformed by the mysterious Exsurgent virus.
+
+
+ \textbf{Credits}
+
+
+
+ QSR material pulled from the Eclipse Phase Core Rulebook, written and designed by Lars Blumenstein, Rob Boyle, Brian Cross, Jack Graham, and John Snead, with additional material by Randall N. Bills.\^A†
+
+
+ Mind the WMD Writing: Rob Boyle
+
+
+ Editing and Development: Randall N. Bills, Rob Boyle
+
+
+ Art Direction: Rob Boyle, Brent Evans
+
+
+ Graphic Design and Layout: Adam Jury
+
+
+ Artwork: Justin Albers, Leanne Buckley, Ben Newman, Will Nichols
+
+
+ Maps: Matt Heerdt
+
+
+ Proofreading: Phil Bordelon, Melissa Rapp, Zak Strassberg
+
+
+ 1.0 by Catalyst Game Labs, an imprint of InMediaRes Productions, LLC 
+ PMB 202 \^aÄ¢ 303 - 91st Ave. NE, G-701\\ 
+ Lake Stevens, WA 98258.\\ 
+ Creative Commons License; Some Rights Reserved.
+
+
+ This work is licensed under the Creative Commons Attribution-Noncommercial-Share Alike 3.0 Unported License.\^A†
+
+
+ To view a copy of this license, visit:
+
+
+ \url{http://creativecommons.org/licenses/by-nc-sa/3.0/}\^A†
+
+
+
+ (What this means is that you are free to copy, share, and remix the text and artwork within this book under the following conditions: 1) you do so only for noncommercial purposes; 2) you attribute Posthuman Studios; 3) you license any derivatives under the same license. For specific details, appropriate credits, and updates/changes to this license, please see:\\ 
+ \url{http://eclipsephase.com/cclicense})
+
+
+
+
+ We humans have a special way of pulling ourselves up and kicking ourselves down at the same time. We\^aÄôd achieved more progress than ever before, at the cost of wrecking our planet and destabilizing our own governments. But things were starting to look up.
+
+
+ With exponentially accelerating technologies, we reached out into the solar system, terraforming worlds and seeding new life. We re-forged our bodies and minds, casting off sickness and death. We achieved immortality through the digitization of our minds, resleeving from one biological or synthetic body to the next at will. We uplifted animals and AIs to be our equals. We acquired the means to build anything we desired from the molecular level up, so that no one need want again.
+
+
+ Yet our race toward extinction was not slowed, and in fact received a machine-assist over the precipice. Billions died as our technologies rapidly bloomed into something beyond control \^aÄ$|$ further transforming humanity into something else, scattering us throughout the solar system, and reigniting vicious conflicts. Nuclear strikes, biowarfare plagues, nanoswarms, mass uploads \^aÄ$|$ a thousand horrors nearly wiped humanity from existence.
+
+
+ We still survive, divided into a patchwork of restrictive inner system hypercorp-backed oligarchies and libertarian outer system collectivist habitats, tribal networks, and new experimental societal models. We have spread to the outer reaches of the solar system and even gained footholds in the galaxy beyond. But we are no longer solely \^aÄúhuman\^aÄù \^aÄ$|$ we have evolved into something simultaneously more and different\^aÄîsomething \textbf{transhuman}
+.
+
+
+ ENTER THE SINGULARITY
+
+
+ nENTER THE SINGULARITYnENTER THE SINGULARITYnENTER THE SINGULARITYnENTER THE SINGULARITY
+
+
+ ENTER THE SINGULARITY 2
+
+
+ What is Transhumanism? 2
+
+
+ ECLIPSE PHASE UNIVERSE 3
+
+
+ eclipse phase Factions  3
+
+
+ The Hypercorps\^A†  3
+
+
+ Political Factions  3
+
+
+ Hypercorps 3
+
+
+ The Mesh 5
+
+
+ ECLIPSE PHASE QUICK-START RULES 8
+
+
+ What\^aÄôs a roleplaying game? 8
+
+
+ Quick-start rules 8
+
+
+ Dice  8
+
+
+ Defining Your Character  8
+
+
+ \textbf{Character Record Sheet 8}
+
+
+
+ Character Stats  9
+
+
+ \textbf{Initiative (INIT) 9}
+
+
+
+ \textbf{Speed (SPD) 9}
+
+
+
+ \textbf{Durability (DUR) 9}
+
+
+
+ \textbf{Wound Threshold (WT) 9}
+
+
+
+ \textbf{Lucidity (LUC) 9}
+
+
+
+ \textbf{Trauma Threshold (TT) 9}
+
+
+
+ \textbf{Moxie 9}
+
+
+
+ \textbf{Damage Bonus  9}
+
+
+
+ Character Skills  9
+
+
+ \textbf{Aptitudes 9}
+
+
+
+ \textbf{Learned Skills 10}
+
+
+
+ Things Characters Use  10
+
+
+ \textbf{Identity  10}
+
+
+
+ \textbf{Social Networks 10}
+
+
+
+ \textbf{Cred  10}
+
+
+
+ \textbf{Rep  10}
+
+
+
+ Making Tests  10
+
+
+ Target Numbers  11
+
+
+ \textbf{When to Make Tests  11}
+
+
+
+ \textbf{Difficulty and Modifiers  11}
+
+
+
+ \textbf{Criticals: Rolling Doubles  11}
+
+
+
+ \textbf{Defaulting: Untrained Skill Use  11}
+
+
+
+ \textbf{Teamwork  12}
+
+
+
+ Types of Tests  12
+
+
+ Success Tests 12
+
+
+ \textbf{Trying Again 12}
+
+
+
+ \textbf{Taking the Time 12}
+
+
+
+ \textbf{Margin of Success/Failure 12}
+
+
+
+ Opposed Tests  12
+
+
+ \textbf{Opposed Tests and Margin of Success/Failure 13}
+
+
+
+ Network intrusion 13
+
+
+ Establishing a Connection 13
+
+
+ \textbf{Network Intrusion Test 13}
+
+
+
+ \textbf{Subversion 13}
+
+
+
+ Reputation and Social Networks  14
+
+
+ Social Networks  14
+
+
+ Reputation  14
+
+
+ Using Networks and Rep  14
+
+
+ \textbf{The Networking Test 14}
+
+
+
+ Action and Combat  15
+
+
+ Action turns  15
+
+
+ \textbf{Step 1: Roll Initiative  15}
+
+
+
+ \textbf{Step 2: Begin First Action Phase  15}
+
+
+
+ \textbf{Step 3: 
+ Declare and Resolve Actions  15}
+
+
+
+ \textbf{Step 4: Rotate and Repeat  16}
+
+
+
+ Initiative  16
+
+
+ \textbf{Initiative Order  16}
+
+
+
+ \textbf{Initiative and Damage 16}
+
+
+
+ \textbf{Initiative and Moxie 16}
+
+
+
+ Speed  16
+
+
+ Movement  16
+
+
+ \textbf{Movement Rates  16}
+
+
+
+ Types of Actions  17
+
+
+ \textbf{Automatic Actions  17}
+
+
+
+ \textbf{Quick Actions  17}
+
+
+
+ \textbf{Complex Actions  17}
+
+
+
+ \textbf{Task Actions  17}
+
+
+
+ \textbf{Delayed Actions  17}
+
+
+
+ Resolving Combat  17
+
+
+ \textbf{\\ 
+ Step 1: Declare Attack 17}
+
+
+
+ \textbf{Step 2: Declare Defense 17}
+
+
+
+ \textbf{Step 3: Apply Modifiers 18}
+
+
+
+ \textbf{Step 4: Make the Opposed Test 18}
+
+
+
+ \textbf{Step 5: Determine Outcome  18}
+
+
+
+ \textbf{Step 6: Modify Armor 18}
+
+
+
+ \textbf{Step 7: Determine Damage 18}
+
+
+
+ \textbf{Step 8: Determine Wounds 18}
+
+
+
+ Combat Factors and Complications  18
+
+
+ Firing Modes and Rate of Fire  18
+
+
+ \textbf{Single Shot (SS) 18}
+
+
+
+ \textbf{Semi-Automatic (SA) 18}
+
+
+
+ \textbf{Burst Fire (BF) 18}
+
+
+ Bots, Synthmorphs and Vehicles 18
+
+
+ \textbf{\\ 
+ Bot and Vehicle Stats 18}
+
+
+
+ \textbf{Crashing 18}
+
+
+
+ Full Defense  19
+
+
+ Armor  19
+
+
+ \textbf{Energy vs. Kinetic Ratings 19}
+
+
+
+ \textbf{Armor Penetration 19}
+
+
+
+ \textbf{Layered Armor 19}
+
+
+
+ Physical Health  19
+
+
+ Damage Points 19
+
+
+ \textbf{Damage Types  19}
+
+
+
+ \textbf{Durability and Health  19}
+
+
+
+ \textbf{Damage Value  20}
+
+
+
+ Wounds  20
+
+
+ \textbf{Wound Effects 20}
+
+
+
+ Mental Health  21
+
+
+ Stress Points  21
+
+
+ \textbf{Lucidity and Stress  21}
+
+
+
+ \textbf{Stress Value  21}
+
+
+
+ Trauma  21
+
+
+ \textbf{\\ 
+ Trauma Effects 21}
+
+
+
+ Derangements  21
+
+
+ MISSION: MIND THE WMD 23
+
+
+ Synopsis 23
+
+
+ Scene 1: Swimming in Scum 23
+
+
+ Assigning the Mission 23
+
+
+ Meeting Up 23
+
+
+ \textbf{The Scum Barge 23}
+
+
+
+ Tracking Down the Dealer 23
+
+
+ \textbf{Face-to-Face Bribes/Threats 24}
+
+
+
+ \textbf{Using Rep 24}
+
+
+
+ \textbf{The Details 24}
+
+
+
+ \textbf{Arranging a Buy 24}
+
+
+
+ Tweaks 24
+
+
+ Scene 2: Deals Gone Bad 24
+
+
+ The Meet 24
+
+
+ \textbf{The Dealer\^aÄôs Security 24}
+
+
+
+ \textbf{The Weapons 25}
+
+
+
+ \textbf{What Would Firewall Do? 25}
+
+
+
+ Uninvited Guests 25
+
+
+ \textbf{Worst-Case Scenario 25}
+
+
+
+ Saving the Barge 26
+
+
+ Friendly Fire 26
+
+
+ Scene 3: Get Your Ass to Mars 26
+
+
+ Resleeving 26
+
+
+ Welcome to Mars 26
+
+
+ Expedition 27
+
+
+ \textbf{Nanofabrication 27}
+
+
+
+ Martian Dangers 27
+
+
+ Tweaks 27
+
+
+ Scene 4: Rumble in the Ruins 27
+
+
+ Scouting the Habitat 27
+
+
+ \textbf{Night Cartel Scavengers 28}
+
+
+
+ \textbf{The Cache 28}
+
+
+
+ Party-Crashers Redux 28
+
+
+ \textbf{Running the Combat 29}
+
+
+
+ Dealing with the Cache 29
+
+
+ Aftermath 29
+
+
+ Player Characters 29
+
+
+ GAME RULES SUMMARIES 38
+
+
+ \textbf{Making Tests  38}
+
+
+
+ \textbf{Success Test  38}
+
+
+
+ \textbf{Opposed Test  38}
+
+
+
+ \textbf{Defaulting  38}
+
+
+
+ \textbf{Modifiers  38}
+
+
+
+ \textbf{Teamwork 38}
+
+
+
+ \textbf{Taking the Time 38}
+
+
+
+ \textbf{Aptitudes  38}
+
+
+
+ \textbf{Learned Skills  38}
+
+
+
+ \textbf{Specializations 38}
+
+
+
+ \textbf{Action Turns  38}
+
+
+
+ ECLIPSE PHASE
+
+
+ An \^aÄúeclipse phase\^aÄù is the period of time between when a cell is infected by a virus and when the virus appears within the cell and transforms it. During this period, the cell does not appear to be infected, but it is.
+
+
+
+
+ \textbf{What is Transhumanism?}
+
+
+
+ Transhumanism is a term used synonymously to mean \^aÄúhuman enhancement.\^aÄù It is an international cultural and intellectual movement that endorses the use of science and technology to enhance the human condition, both mentally and physically. In support of this, transhumanism also embraces using emerging technologies to eliminate the undesirable elements of the human condition such as aging, disabilities, diseases, and involuntary death. Many transhumanists believe these technologies will be arriving in our near future at an exponentially accelerated pace and work to promote universal access to and democratic control of such technologies. In the long scheme of things, transhumanism can also be considered the transitional period between the current human condition and an entity so far advanced in capabilities (both physical and mental faculties) as to merit the label \^aÄúposthuman.\^aÄù
+
+
+ As a theme, transhumanism embraces heady questions. What defines human? What does it mean to defeat death? If minds are software, where do you draw the line with programming them? If machines and animals can also be raised to sentience, what are our responsibilities to them? If you can copy yourself, where does \^aÄúyou\^aÄù end and someone new begin? What are the potentials of these technologies in terms of both oppressive control and liberation? How will these technologies change our society, our cultures, and our lives? n
+
+
+ Your mind is software. \emph{Program it.}
+
+
+
+ Your body is a shell. \emph{Change it.}
+
+
+
+ Death is a disease. \emph{Cure it.}
+
+
+
+ Extinction is approaching. \emph{Fight it.}
+
+
+
+ ECLIPSE PHASE UNIVERSE
+
+
+
+ eclipse phase Factions\^A†
+
+
+ One would have thought a cataclysmic event such as the Fall would bring surviving transhumanity closer to each other in an attempt to jointly dedicate themselves to the repopulation of the solar system and continued prosperity. While some of the post-Fall economic, social, or political powers do indeed pursue philanthropic or altruistic agendas, the remoteness and physical isolation of transhuman colonies and habitats stretched across the solar system, the disembodiment of the infomorph refugees, and the ubiquity of the mesh\^aÄôs myriad of memes and ideologies have promoted the evolution of a wide spectrum of philosophies, agendas, and political models. Today, transhumanity couldn\^aÄôt be further from walking a united path toward its future.\^A†\^A†
+
+
+ \^A†
+
+
+ The Hypercorps\^A†\^A†
+
+
+ The hypercorps both evolved from and superseded the old earthbound transnational corporations, economic giants whose influence (direct or covert) extended into the governments and nations of old. The transformation of some of those monolithic transnationals into the slimmer, future-embracing, more flexible and faster hypercorps known today preceded the Fall and allowed these financial sharks to adapt to transhumanity\^aÄôs challenges and navigate the swiftly changing economic waters rapidly and efficiently.
+
+
+ Most hypercorps are decentralized, non-asset-based legal entities (sometimes entirely virtual) relying on an intricate system of specialized internal subsidiaries and partner companies to develop, produce, and market their products and services. Nearly complete automation, advanced robotics, morph technology, mesh networking, and cornucopia machines allow the hypercorps to abstain from mass employment for labor or production. Many administrative tasks are performed in virtual environments and simulated offices. The need for physical labor has mostly been reduced to tasks associated with habitat construction or deep-space mining, which benefit heavily from the overabundance of infomorph refugees desperate to regain a physical presence.\^A†
+
+
+
+
+ Political Factions\^A†
+
+
+ Transhumanity\^aÄôs social, cultural, and ideological diversity, as well as its scattered and isolated presence in habitat clusters throughout the solar system, allowed the manifestation of a wide range of political ideologies and factions that advocate equally diverse models or systems. Naturally, controversial regimes don\^aÄôt achieve stability overnight or evolve without dissent, and even established ideologies over time rarely remain free of diluting or even corrupting influence from outside factors or groups seeking to promote their own agendas.\^A†\^A†
+
+
+ The Mesh
+
+
+ The mesh, as it exists in Eclipse Phase, is only possible thanks to major developments made in computer/communication technologies and nanofabrication. Wireless radio transceivers are so unobtrusively tiny that they can literally be factored into anything. As a result, everything is computerized and connected.\^A†
+
+
+ Data storage technology has advanced so that even an individual user\^aÄôs surplus storage capacity can maintain an amount of information surpassing the entire 20th-century internet. Lifeloggers literally record every moment of their life and never fear about running out of room.\^A†
+
+
+ Processing capabilities also exist at hyper-efficient levels. Modest handheld devices can fulfill almost all of your needs, even while simultaneously running a personal AI assistant, downloading media, uploading porn, and scanning thousands of newsfeeds. Within the mesh network, devices that near their processing limits simply share the burden with devices around them.
+
+
+ Similarly, transmission capacity now far exceeds most citizens\^aÄô definition of need. Anyone born within the last several generations has always lived in a world in which hyper-realistic, multi-sensory media of nearly any length is available for instantaneous download. Massive databases and archives are copied back and forth with ease. Bandwidth is such a non-issue that most people forget it ever was. The mesh is also never down. As a decentralized network, if any one device is taken offline, connections merely route around it, finding a path via thousands of available nodes.
+
+
+ Almost everyone is equipped with implanted personal computers, directly wired to the user\^aÄôs cerebral functions. Thought-to-communication emulations enables the user to control the implant just by thinking and to communicate without vocalizing. Input is transmitted directly into the brain and sometimes perceived as augmented reality, overlaid on the user\^aÄôs physical senses.
+
+
+  
+
+
+
+
+ Hypercorps
+
+
+ The following is a small sampling of hypercorps.
+
+
+
+
+
+ ComEx
+
+
+ Comet Express specializes in delivery services, interstellar logistics, supply chains, and shipping. They maintain a presence on almost every transhuman habitat in the solar system, often via local subcontractors. ComEx maintains orbital hubs equipped with slingshot accelerators at strategic waypoints throughout the system and a fleet of cargo vessels and courier drones.
+
+
+
+
+
+ Direct Action
+
+
+ This apolitical mercenary corp, descended from the remnants of several pre-Fall militaries, provides security and public police services to self-governing habitats or hypercorp installations.
+
+
+
+
+
+ Ecologene
+
+
+ Ecologene specializes in genetically-engineered bio-architecture and environmental nanotech with a strong ecologically-conscious approach.
+
+
+
+
+
+ Fa Jing
+
+
+ Fa Jing dominates mining and energy production with a business philosophy that emphasizes network-building and social responsibility-sharing.
+
+
+
+
+
+ Gatekeeper Corporation\^A†\^A†
+
+
+ Born from the merger of several scientific institutions and their corporate financiers, this hypercorp made a name for itself when it decoded and opened the wormhole gateway discovered on Saturn\^aÄôs Pandora moon. The consortium today funds gatecrasher explorations through the Pandora Gate.
+
+
+
+
+ Skinthetic
+
+
+ Specializing in neogenesis and extensive, radical bio-modifications, this anarcho-capitalist company pushes the envelope of cloning, genetics, and morph design.
+
+
+
+
+
+ Solaris\^A†
+
+
+ Solaris is the system\^aÄôs leading banking and financial investment hypercorp, dealing in insurances, futures markets, info-brokerage and high-risk investments. Solaris is a virtual corporation, with each banker acting as a nomadic office.  n
+
+
+ \textbf{\emph{Eclipse Phase}
+ Timeline}
+
+
+
+ All dates are given in reference to the Fall. BF = Before the Fall. AF = After the Fall. (e.g., BF 10 = 10 years before the Fall.)
+
+
+ 
+
+
+
+ BF 60+
+
+
+ \^aÄ¢ Crisis grips the globe in the form of drastic climate changes, energy shortages, and geopolitical instability.
+
+
+ \^aÄ¢ Initial space expansion creates stations at the Lagrange Points, Luna, and Mars, with robotic exploration of the entire system.
+
+
+ \^aÄ¢ Construction begins on a space elevator.
+
+
+ \^aÄ¢ Medical advances improve health and organ repair. The rich pursue gene-fixing and transgenic pets.
+
+
+ \^aÄ¢ Computer intelligence capabilities equal and exceed that of the human brain. True AI not yet developed.
+
+
+ \^aÄ¢ Robotics become widespread and start to replace/invalidate many jobs.
+
+
+ \^aÄ¢ Modern nations expand their high-speed wireless networks.
+
+
+ 
+
+
+
+ BF 60\^aÄì40
+
+
+ \^aÄ¢ Efforts to undertake mega-scale geoengineering on Earth cause as many problems as they fix.
+
+
+ \^aÄ¢ Major colonies established on the Moon and Mars; outposts established near Mercury, Venus, and the Belt. Explorers reach Pluto.
+
+
+ \^aÄ¢ First space elevator on Earth finished. Two others in progress. Space traffic booms.
+
+
+ \^aÄ¢ Mass driver built on the Moon.
+
+
+ \^aÄ¢ Terraforming of Mars begins.
+
+
+ \^aÄ¢ Fusion power developed and working plants established.
+
+
+ \^aÄ¢ Genetic enhancements, gene therapies (for longevity), and cybernetic implants become available to the wealthy and powerful.
+
+
+ \^aÄ¢ First non-autonomous AIs are secretly developed and quickly put to use in research and netwar.
+
+
+ \^aÄ¢ Experience playback (XP) technology developed and put into public use.
+
+
+ 
+
+
+
+ BF 40\^aÄì20
+
+
+ \^aÄ¢ Violence and destabilization wrack the Earth; some conflicts spread into space.
+
+
+ \^aÄ¢ Argonauts split from hypercorps, taking resources to autonomist habitats.
+
+
+ \^aÄ¢ Space expansion opens up legal/ethical loopholes for tech development and allows for increased direct human experimentation.
+
+
+ \^aÄ¢ Human cloning becomes possible and available in some areas.
+
+
+ \^aÄ¢ Development of first transhuman species.
+
+
+ \^aÄ¢ First dolphins and chimpanzees uplifted to sapience.
+
+
+ \^aÄ¢ Fusion-drive spacecraft enter common usage.
+
+
+ \^aÄ¢ Extended colonization and terraforming of Mars continues. Belt and Titan colonized. Stations established throughout the system.
+
+
+ \^aÄ¢ The starving masses volunteer themselves for indentured servitude on hypercorp space projects.
+
+
+ \^aÄ¢ Augmented reality becomes widespread.
+
+
+ \^aÄ¢ Most networks transformed into self-repairing mesh networks.
+
+
+ \^aÄ¢ Personal AI aides become widespread.
+
+
+ 
+
+
+
+ BF 20\^aÄì0
+
+
+ \^aÄ¢ Earth continues to suffer, but the pace of technology allows for some interesting developments.
+
+
+ \^aÄ¢ Expansion throughout the system, even into the Kuiper Belt.
+
+
+ \^aÄ¢ Transhuman species become widespread.
+
+
+ \^aÄ¢ Nanotech assemblers become available, but are strictly controlled and jealously guarded by the elite and powerful.
+
+
+ \^aÄ¢ Uploading and the digital emulation of memory and consciousness made possible.
+
+
+ \^aÄ¢ More species (gorillas, orangutans, octopi, ravens, parrots) uplifted to sapience.
+
+
+ \^aÄ¢ Pods see common usage, amid some controversy.
+
+
+ 
+
+
+
+ The Fall
+
+
+ \^aÄ¢ The TITANs evolve from a high-level distributed netwar experiment into self-improving seed AIs. For the first few days, their existence is unsuspected. They advance their awareness, knowledge, and power exponentially, infiltrating the mesh both on Earth and around the system.
+
+
+ \^aÄ¢ Large-scale netwar incursions break out between rival states on Earth, sparking numerous conflicts. These attacks are later blamed on the TITANs.
+
+
+ \^aÄ¢ Simmering tensions on Earth escalate into outright hostilities and warfare.
+
+
+ \^aÄ¢ Massive netwar breaks out and major systems crash as TITANs begin open attacks, also using autonomous war machines.
+
+
+ \^aÄ¢ Conflict quickly spirals out of control. The use of nuclear, biological, chemical, digital, and nanotech weapons reported by all sides.
+
+
+ \^aÄ¢ TITANs engage in mass forced uploading of human minds.
+
+
+ \^aÄ¢ TITAN attacks expand to other parts of solar system, heaviest on the Moon and Mars. Numerous habitats also fall.
+
+
+ \^aÄ¢ TITANs suddenly disappear from system, taking millions of uploaded minds with them.
+
+
+ \^aÄ¢ The Earth is left a devastated wasteland, a patchwork of radiation hotspots, sterile zones, nanoswarm clouds, roaming war machines, and other unknown and hidden things among the ruins.
+
+
+ 
+
+
+
+ AF 0\^aÄì10
+
+
+ \^aÄ¢ A wormhole gateway is discovered on Saturn\^aÄôs moon Pandora, left by the TITANs. Four others are later found (in the Vulcanoids, on Mars, on Uranus, and in the Kuiper Belt); these are collectively referred to as \^aÄúPandora Gates.\^aÄù
+
+
+ \^aÄ¢ Expeditions are sent to extrasolar worlds via the Pandora Gates. Numerous exoplanet colonies established.
+
+
+ \^aÄ¢ First contact with the aliens known as the Factors shocks the system. Claiming to act as ambassadors for other alien civilizations, they provide little information about life outside the solar system and warn transhumans away from both seed AI and the Pandora Gates.
+
+
+ \^aÄ¢ An attempt to raise a generation of children using force-grown clones and time-accelerated VR fails miserably when most of the children die or go insane. Dubbed the Lost Generation, the survivors are viewed with repugnance and pity.
+
+
+ 
+
+
+
+ AF 10
+
+
+ \^aÄ¢ Present day. n
+
+
+ socio-political entities
+
+
+ 
+
+
+
+ Argonauts
+
+
+ The Argonauts are an open organization of techno-progressives that advocate the socially responsible use of technology. The Argonauts offer consultation services to political and economic powers throughout the solar system, but otherwise strictly refuse to be drawn into the solar system\^aÄôs political affairs.
+
+
+ Memes: Information freedom, social responsibility, technological advancement\^A†\^A†
+
+
+ Major Stations: Mitre Station (Lunar Orbit), Pelion Station (Kuiper Belt)\^A†
+
+
+ 
+
+
+
+ Autonomists
+
+
+ The Autonomists are a loose alliance of several libertarian factions\^aÄîanarcho-communists, anarcho-capitalists, and techno-socialists\^aÄîthat promote egalitarian social models based on the pillars of direct democracy, individual/collective empowerment, social networks and reputation-building, and economic communism enabled by equal access to cornucopia machines, shared resources, and new technologies.
+
+
+ Memes: Anarchism/Communism, Morphological Freedom
+
+
+ Major Stations: Extropia (Belt), Locus (Trojans), Titan\^A†
+
+
+ 
+
+
+
+ Jovian Republic\^A†
+
+
+ A coup staged during the Fall brought a group of stations and habitats under military control and the Jovian Republic\^aÄîalso known as the Jovian Junta\^aÄîwas born. The Republic\^aÄôs authorities take a bio-conservative stance against many transhuman technologies and strictly control information channels and travel.
+
+
+ Memes: Bio-conservatism, Nationalism, Security
+
+
+ Major Stations: Liberty (Ganymede)
+
+
+ 
+
+
+
+ Planetary Consortium\^A†\^A†
+
+
+ The Planetary Consortium is an alliance of hypercorporate interests that jointly controls a number of stations and habitats, particularly in the inner system. The Consortium maintains a facade of democratic rule, facilitated by real-time online referendum voting, but it is an open secret that the hypercorps call the shots.
+
+
+ Memes: Corporatism, Cyberdemocracy, Gerontocracy
+
+
+ Main Stations: Progress (Deimos) , Elysium (Mars)
+
+
+ 
+
+
+
+ Scum\^A†
+
+
+ The derogative term \^aÄúscum\^aÄù describes large tribes of nomadic space gypsies, travelling from station to station in heavily modified barges or swarms of smaller space vessels, mostly former colonial ships. Part traveling carnival, part black market, the scum openly embrace body modification and experimentation.
+
+
+ Memes: Lifestylism, Morphological freedom
+
+
+ 
+
+
+
+ Ultimates
+
+
+ This controversial faction uses applied eugenics to further its goal, the development of the ultimate transhuman species. Aside from sophisticated reprogenetic engineering and strict psychological training, their culture visualizes\^A† life\^A† in\^A† the universe as an\^A† evolutionary battle for survival and is built around the victory of the superior transhuman over its peers.\^A†
+
+
+ Memes: Asceticism, Eugenics, Objectivism
+
+
+ Major Stations: Xiphos (Uranus) n
+
+
+ \textbf{TERMINOLOGY}
+
+
+
+ n \textbf{AGI:}
+ Artificial General Intelligence. An AI that has cognitive faculties comparable to that of a human or higher. Aka \^aÄústrong AI\^aÄù (differentiating from \^aÄúseed AI\^aÄù or more specialized \^aÄúweak AI.\^aÄù
+
+
+ n \textbf{AI:}
+ Artificial Intelligence. Generally used to refer to weak AIs; i.e., AIs that do not encompass (or in some cases, are completely outside of) the full range of human cognitive abilities. AIs differ from AGIs in that they are usually specialized and/or intentionally crippled/limited.
+
+
+ n \textbf{AR:}
+ Augmented Reality. Information from the mesh (universal data network) that is overlaid on your real-world senses. AR data is usually entoptic (visual), but can also be audio, tactile, olfactory, kinesthetic (body awareness), emotional, and other senses.
+
+
+ n \textbf{Bots:}
+ Robots.
+
+
+ n \textbf{Brinkers:}
+ Exiles who live on the fringes of the system, as well as other isolated and well-hidden nooks and crannies. Aka isolates, fringers, drifters.
+
+
+ n \textbf{Cornucopia Machine:}
+ A nanofabricator.
+
+
+ n \textbf{Cortical Stack:}
+ An implanted memory cell used for ego backup. Located where the spine meets the skull; can be cut out.
+
+
+ n \textbf{Ecto:}
+ Personal mesh devices that are flexible, stretchable, self-cleaning, translucent, and solar-powered. From ecto-link (external link).
+
+
+ n \textbf{Ego:}
+ The part of you that switches from body to body. Aka ghost, soul, essence, spirit, persona.
+
+
+ n \textbf{Ego-casting:}
+ Term for sending egos via farcasting.
+
+
+ n \textbf{Entoptics:}
+ Augmented-reality images that you \^aÄúsee\^aÄù in your head. (\^aÄúEntoptic\^aÄù means \^aÄúwithin the eye.\^aÄù)
+
+
+ n \textbf{Factors:}
+ The alien ambassadorial race that deals with transhumanity. Aka Brokers.
+
+
+ n \textbf{The Fall:}
+ The apocalypse; the singularity and wars that nearly brought about the downfall of transhumanity.
+
+
+ n \textbf{Farcasting:}
+ Interstellar communication via FTL links.
+
+
+ n \textbf{Firewall:}
+ The secret conspiracy that works to protect transhumanity from \^aÄúexistential threats\^aÄù (risks to transhumanity\^aÄôs continued existence).
+
+
+ n \textbf{Flats:}
+ Baseline humans (not genetically modified). Aka norms.
+
+
+ n \textbf{FTL:}
+ Faster-Than-Light.
+
+
+ n \textbf{Gate Crashers:}
+ Explorers who take their chances using a Pandora Gate to go somewhere previously unexplored.
+
+
+ n \textbf{Iktomi:}
+ The name given to the mysterious alien race whose relics have been found beyond the Pandora gates.\^A†
+
+
+ n \textbf{Infomorph:}
+ A digitized ego; a virtual body. Aka datamorphs, uploads, backups.\^A†
+
+
+ n \textbf{Infugee:}
+ \^aÄúInfomorph refugee,\^aÄù or someone who left everything behind on Earth during the Fall\^aÄîeven their own body.\^A†
+
+
+ n \textbf{Isolates:}
+ Those who live in isolated communities far outside the system (in the Kuiper Belt and Oort Cloud); aka outsters, fringers.
+
+
+ n \textbf{Lost Generation:}
+ In an effort to repopulate post-Fall, a generation of children were reared using forced-growth methods. The results were disastrous: many died or went insane, and the rest were stigmatized.
+
+
+ n \textbf{Mercurials:}
+ The non-human sentient elements of the transhuman \^aÄúfamily,\^aÄù including AIs and uplifted animals.
+
+
+ n \textbf{Mesh:}
+ The omnipresent wireless mesh data network. Also used as a verb (to mesh) and adjective (meshed or unmeshed).
+
+
+ n \textbf{Morph:}
+ A physical body. Aka suit, jacket, sleeve, form.
+
+
+ n \textbf{Muse:}
+ Personal AI helper programs.
+
+
+ n \textbf{Neo-Avians:}
+ Uplifted ravens and gray parrots.
+
+
+ n \textbf{Neo-Hominids:}
+ Uplifted chimpanzees, gorillas, and orangutans.
+
+
+ n \textbf{Pandora Gates:}
+ The wormhole gateways left behind by the TITANs.
+
+
+ n \textbf{Pods:}
+ Mixed biological-synthetic morphs. Pod clones are force-grown and feature computer brains. Aka bio-bots, skinjobs, replicants. From \^aÄúpod people.\^aÄù\^A†
+
+
+ n \textbf{Reclaimers:}
+ A transhuman faction that seeks to lift the interdiction and reclaim Earth.
+
+
+ n \textbf{Reinstantiated:}
+ Refugees from Earth who escaped only as bodiless infomorphs but have since been resleeved.
+
+
+ n \textbf{Resleeving:}
+ Changing bodies. Aka morphing, reincarnation, shifting, rebirthing.
+
+
+ n \textbf{Seed AI:}
+ An AGI that is capable of recursive self-improvement, allowing it to reach god-like levels of intelligence.
+
+
+ n \textbf{Shell:}
+ A synthetic physical morph. Aka synthmorph.\^A†
+
+
+ n \textbf{Singularity:}
+ A point of rapid, exponential, and recursive technological progress, beyond which the future becomes impossible to predict. Often used to refer to the ascension of seed AIs to god-like levels of intelligence.
+
+
+ n \textbf{Skin:}
+ A biological physical morph. Aka meat, flesh.
+
+
+ n \textbf{Splicers:}
+ Genetically modified to eliminate genetic diseases and some other traits. Aka genefixed, cleangenes, tweaks.
+
+
+ n \textbf{Synthmorph:}
+ Synthetic morph. A robotic shell possesseds by a transhuman ego.\^A†
+
+
+ n \textbf{TITANs:}
+ The human-created, recursively improving military AGIs that underwent a singularity and prompted the Fall. Original military designation was TITAN: Total Information Tactical Awareness Network.
+
+
+ n \textbf{Transhuman:}
+ An extensively modified human.\^A†
+
+
+ n \textbf{Uplifting:}
+ Genetically transforming an animal species to sapience.
+
+
+ n \textbf{Xenomorph:}
+ Alien life form.
+
+
+ n \textbf{XP:}
+ Experiencing someone else\^aÄôs sensory input (in real-time or recorded). Aka experia, sim, simsense, playback.
+
+
+ n \textbf{X-Risk:}
+ Existential risk. Something that threatens the very existence of transhumanity.
+
+
+ 
+
+
+
+ An Exsurgent Threat?
+
+
+ [Incoming Message. Source: Anonymous]
+
+
+ [Public Key Decryption Complete]
+
+
+ Ok, you asked, so I\^aÄôll tell you. There are some elements within Firewall that don\^aÄôt buy into the TITANs-ran-amok-and-considered-us-a-threat idea, or even that the TITANs are solely responsible for the Fall. These people think that the TITANs found or encountered something when they started their takeoff toward the singularity\^aÄîsomething that changed them. They point to the wide range of multi-vector virii that ran loose during the Fall, and how even many of the TITANs seem to have succumbed to these infections. They also reference a disturbing number of accounts of events during the Fall that are inexplicable \^aÄ$|$ things like people being transformed into strange, alien creatures \^aÄ$|$ or phenomena that seem to defy certain physical laws, as if something was at times ignoring what we know of physics and just doing whatever it felt like \^aÄ$|$ Some of these voices within Firewall even think that the TITANs may not have been responsible for the Pandora Gates \^aÄ$|$ They have a name for this mystery infection. They call it the Exsurgent virus.\^A† 
+
+
+ criminal factions
+
+
+ Where there is humanity, there will be an underworld and the organizations that run it. The following are a sample of the major players.
+
+
+ 
+
+
+
+ Triads
+
+
+ The only syndicate that survived the Fall almost unscathed, the Triads dominate the solar system\^aÄôs underworld by their sheer membership size and a history of centuries of economic and political influence. Having evolved into legit enterprises and small economic consortiums before the Fall, the Triads had the resources to ensure their survival during the evacuation from Earth and the connections throughout all major habitats to gain a foothold early on in the colonization of space.
+
+
+ 
+
+
+
+ Night Cartel\^A†
+
+
+ Progressive in both entrepreneurial and criminal vision, the Night Cartel emerged from the remnants of Earth\^aÄôs underworld syndicates, merging the best qualities of each. Depending on the field of operations, the Night Cartel even holds legitimate hypercorp status in certain habitats, while working outside the law elsewhere. The Night Cartel is involved in all kinds of criminal activity, from traditional racketeering, extortion, and prostitution to nanofabber piracy, electronic stimulants, and designer drugs.
+
+
+ \^A†
+
+
+ Intelligent Design Crew (ID-Crew)\^A†
+
+
+ The ID crew specializes in electronic crimes and information brokerage, including credit and rep fraud, identity counterfeiting, and datatheft. The ID crew is believed to have grown from several hacker gangs assimilated under the leadership of an infomorph consortium. Due to its service sector, the ID crew maintains a minimalist physical profile, but can be found in almost any habitat\^aÄôs or station\^aÄôs mesh.
+
+
+ 
+
+
+
+ Nine Lives
+
+
+ This widespread network of soul-traders specializes in the acquisition and trafficking of transhuman egos. Stealing backups, forknapping, and intercepting egocasts are all part of their repertoire. Nine Lives are known to run illegal fork-slave colonies as well as organize pit fights with all manner of physical bodies (synthetic shells, pods, uplifts, smart animals) and all manner of egos (human, AI, animal, etc).\^A†
+
+
+ INFORMATION AT YOUR FINGERTIPS
+
+
+ The following information is always available for most meshers in a normal habitat or city.
+
+
+ Local conditions
+
+
+ \^aÄ¢ Local maps showing your current location, annotated with local features of personal interest (according to your personal preferences and \"{\i}$\neg$Å lters) and your distance from them/directions to them. Details regarding private and restricted areas (government/hypercorp areas, maintenance/security infrastructure, etc.) are usually not included.
+
+
+ \^aÄ¢ Current habitat life support (climate) conditions, including atmosphere composition and temperature.
+
+
+ \^aÄ¢ Current solar system and habitat orbit map with trajectory plots and communication delays.
+
+
+ 
+
+
+
+ Local mesh
+
+
+ \^aÄ¢ Public search engines, databases, mesh sites, blogs, forums, and archives, along with new content alerts.
+
+
+ \^aÄ¢ Syndicated newsfeeds in a variety of formats, \"{\i}$\neg$Åltered according to your preferences.
+
+
+ \^aÄ¢ Sensor feeds from any public area of the habitat.
+
+
+ \^aÄ¢ Automatic searches for new online references to your name and other subjects of interest.
+
+
+ \^aÄ¢ Facial/image recognition searches of public mesh/archives to match a photo/vid still.
+
+
+ 
+
+
+
+ Personal information
+
+
+ \^aÄ¢ Morph status indicators (medical and/or mechanical): blood pressure, heart rate, temperature, white cell count, nutrient levels, implant status and functionality, etc.
+
+
+ \^aÄ¢ Location, functionality, sensor feeds, and status reports of your possessions (via sensors and transmitters in these possessions).
+
+
+ \^aÄ¢ Access to one\^aÄôs life-spanning personal audio-visual/XP archive.\^A†
+
+
+ \^aÄ¢ Access to one\^aÄôs life-spanning personal file archive (music, software, media, documents, etc.).
+
+
+ \^aÄ¢ Reputation score, social network status, and credit account status. n
+
+
+ 
+
+
+
+ ECLIPSE PHASE QUICK-START RULES
+
+
+ nQUICK-START RULESnQUICK-START RULESnQUICK-START RULESnQUICK-START RULESnQUICK-START RULES
+
+
+ 2
+
+
+ \emph{Eclipse Phase}
+ is a post-apocalyptic game of conspiracy and horror. Humanity is enhanced and improved, but also battered and bitterly divided. Technology allows the re-shaping of bodies and minds, but also creates opportunities for oppression and puts the capability for mass destruction in the hands of everyone. And other threats lurk in the devastated habitats of the Fall, dangers both familiar and alien.
+
+
+ In this harsh setting, the players participate in a cross-faction conspiracy called Firewall that seeks to protect transhumanity from threats both internal and external. Along the way, they may find themselves hunting for prized technology in a gutted habitat falling from orbit, risking the hellish landscapes of a ruined earth, or following the trail of a terrorist through militarized stations and isolationist habitats. Players may even find themselves stepping through a Pandora Gate, a wormhole to distant stars and the alien secrets beyond \^aÄ$|$
+
+
+ 
+
+
+
+ What\^aÄôs a roleplaying game?
+
+
+ Roleplaying games require one or more players and a gamemaster. The players control the main characters of the story. The gamemaster (GM) directs the action of the story and controls all other characters (known as non-player characters, or NPCs), the props, the setting, and everything else the player characters may encounter. Players and gamemasters work together to build an intense and interesting adventure. As a player, you control a player character (PC). All of the character\^aÄôs statistics and information are noted on your Character Record Sheet. During the course of the game, the gamemaster will describe events or situations to you. As you roleplay through some situations, the gamemaster will probably ask you to roll some dice, and the resulting numbers will determine the success or failure of your character\^aÄôs attempted action. The gamemaster uses the rules of the game to interpret the dice rolls and outcome of your character\^aÄôs action.
+
+
+ 
+
+
+
+ Quick-start rules
+
+
+ We have specifically designed these quick-start rules (QSR) to drop you straight into the maelstrom of a universe torn asunder by out-of-control technologies, warring factions, aloof alien races, and darker, more ominous secrets waiting in the darkness.
+
+
+ Read through these quick-start rules, including the parts of the adventure for players (p. 23), once \^aÄ$|$ it won\^aÄôt take long. Then jump right into playing the adventure, which will have you practicing what you\^aÄôve just read, and enjoying all that \emph{Eclipse Phase}
+ has to offer in minutes!
+
+
+ 
+
+
+
+ Dice\^A†
+
+
+ \emph{Eclipse Phase}
+ uses two ten-sided dice (each noted as a \emph{d10}
+) for random rolls. In most cases, the rules will call for a percentile roll, noted as \emph{d100,}
+ meaning that you roll two-ten sided dice, choosing one to count first, and then read them as a result between 0 and 99 (with a roll of 00 counting as zero, not 100). The first die counts as the tens digit, and the second die counts as the ones digit. For example, you roll two ten-sided dice, one red and one black, calling out red first. The red one rolls a 1 and the black die rolls a 6, for a result of 16.
+
+
+ Occasionally the rules will call for individual die rolls, with each ten-sided die as a \emph{d10. }
+If the rules call for several dice to be rolled, it will be noted as 2d10, 3d10, and so on. When multiple ten-sided dice are rolled together, the results are added up. A 3d10 roll of 4, 6 and 7, for example, counts as 17. On d10 rolls, a result of 0 is treated as a 10, not a zero.\^A†
+
+
+ 
+
+
+
+ Defining Your Character\^A†
+
+
+ In order to gauge and quantify what your character is merely good at and what they excel in\^aÄîor what they are clueless about and suck at\^aÄîEclipse Phase uses a number of measurement factors: stats, skills, traits, and morphs.\^A†
+
+
+ 
+
+
+
+ \textbf{Character Record Sheet}
+
+
+
+ Character Record Sheets note the game statistics (numbers and information) that allow the character to interact within the framework of \emph{Eclipse Phase}
+\^aÄôs game system. In other words, as you move, interact with people and fight, all the information you need to know for those actions is tracked on the Character Record Sheet. The Character Record Sheet also tracks damage done to your character during combat.
+
+
+ For these quick-start rules, pre-generated Character Record Sheets have been provided, with all their game statistics already noted, so players can immediately jump into the action.
+
+
+ As players read through the various rules, they may find that glancing at one of the pre-generated Character Record Sheets after reading a particular section will enable them to better understand how a given rule works.
+
+
+ 
+
+
+
+ 
+
+
+
+ Character Stats\^A†
+
+
+ Your character\^aÄôs stats measure several characteristics important to game play: \emph{Initiative, Speed, Durability, Wound Threshold, Lucidity, Trauma Threshold, Moxie, }
+and\emph{ Damage Bonus.}
+ Some of these stats are inherent to your character\^aÄôs ego, while others are influenced or determined by morph.
+
+
+ 
+
+
+
+ \textbf{Initiative (INIT)}
+
+
+
+ Your character\^aÄôs Initiative stat helps to determine when they act in relation to other characters during the Action Turn.\^A†
+
+
+ 
+
+
+
+ \textbf{Speed (SPD)}
+
+
+
+ The Speed stat determines how often your character gets to act in an Action Turn. Certain morphs, implants, and other advantages may boost this up to a maximum of 4.
+
+
+ 
+
+
+
+ \textbf{Durability (DUR)}
+
+
+
+ Durability is your morph\^aÄôs physical health (or structural integrity in the case of synthetic shells, or system integrity in the case of infomorphs). It determines the amount of damage your morph can take before you are incapacitated or killed.\^A†
+
+
+ 
+
+
+
+ \textbf{Wound Threshold (WT)}
+
+
+
+ Your Wound Threshold is used to determine if you take a wound each time you take physical damage. The higher the Wound Threshold, the more resistant to serious injury you are.
+
+
+ 
+
+
+
+ \textbf{Lucidity (LUC)}
+
+
+
+ Lucidity is similar to Durability, except that it measures mental health and state of mind rather than physical well being. Your Lucidity determines how much stress (mental damage) you can take before you are incapacitated or driven insane.
+
+
+ 
+
+
+
+ \textbf{Trauma Threshold (TT)}
+
+
+
+ Your Trauma Threshold determines if you suffer a trauma (mental wound) each time you take stress. A higher Trauma Threshold means your mental state is more resilient against experiences that might inflict psychiatric disorders or other serious mental instabilities.
+
+
+ 
+
+
+
+ \textbf{Moxie}
+
+
+
+ Moxie represents your character\^aÄôs inherent talent at facing down challenges and overcoming obstacles with spirited fervor. More than just luck, Moxie is your character\^aÄôs ability to run the edge and do what it takes, no matter the odds.Moxie points may be spent for any of the following effects:
+
+
+ 
+
+
+
+ \^aÄ¢ The character automatically succeeds at a Success Test. The Moxie point must be spent before dice are rolled, and this option may not be used in combat situations. If the test calls for a Margin of Success, the MoS is 10.
+
+
+ \^aÄ¢ The character may flip-flop a d100 roll result (for example, an 83 would become a 38).\^A†
+
+
+ \^aÄ¢ The character may ignore a critical failure (treat it as a regular failure instead).
+
+
+ 
+
+
+
+ \textbf{Damage Bonus\^A†}
+
+
+
+ The Damage Bonus stat is how much extra oomph your character can give their melee and thrown weapons attacks.\^A†
+
+
+ 
+
+
+
+ Character Skills\^A†
+
+
+ Skills represent your character\^aÄôs talents. Skills are broken down into \emph{aptitudes}
+ (ingrained abilities that everyone has) and \emph{learned skills}
+ (abilities and knowledge picked up over time). Skills determine the target number used for tests (\emph{see Making Tests, p. $<$OV$>$}
+).\^A†
+
+
+ 
+
+
+
+ \textbf{Aptitudes}
+
+
+
+ Aptitudes are the core skills that every character has by default. They are the foundation on which learned skills are built. They represent the ingrained characteristics and talents your character has developed from birth, and they stick with your character even when changing morphs.\^A†
+
+
+ \emph{Eclipse Phase}
+ has seven aptitudes:
+
+
+ \textbf{Cognition (COG)}
+ is aptitude for problem-solving, logical analysis, and understanding. It includes memory and recall.
+
+
+ \textbf{Coordination (COO)}
+ is skill at integrating the actions of different parts of a morph to produce smooth, successful movements. It includes manual dexterity, fine motor control, nimbleness, and balance.
+
+
+ \textbf{Intuition}
+ \textbf{(INT)}
+ is skill at following gut instincts and evaluating on the fly. It includes physical awareness, cleverness, and cunning.
+
+
+ \textbf{Reflexes (REF)}
+ is the capacity to act quickly. It encompasses reaction time, gut-level response, and the ability to think fast.
+
+
+ \textbf{Savvy (SAV)}
+ is mental adaptability, social intuition, and proficiency at interacting with others. It includes social awareness and manipulation.
+
+
+ \textbf{Somatics (SOM)}
+ is skill at pushing a morph to the best of its physical ability, including the fundamental use of the morph\^aÄôs strength, endurance, and sustained positioning and motion.
+
+
+ \textbf{Willpower (WIL)}
+ is self-control, a character\^aÄôs ability to command their own destiny.\^A†
+
+
+ 
+
+
+
+ \textbf{Learned Skills}
+
+
+
+ Learned skills encompass a wide range of specialties and education, from combat training to negotiating to astrophysics. Each learned skill is linked to an aptitude, which represents the underlying competency in which the skill is based. Like aptitudes, learned skills stay with the character even when characters change morphs, though certain morphs, implants, and other factors may sometimes modify the character\^aÄôs skill rating. If your character lacks a particular skill that a test calls for, you can in most cases default to the linked aptitude for the test (\emph{see Defaulting: Untrained Skill Use, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ Things Characters Use\^A†
+
+
+ In the advanced technological setting of \emph{Eclipse Phase,}
+ characters don\^aÄôt get by on their wits and morphs alone. Characters take advantage of their credit and reputation to acquire gear and implants, and make use of their social networks to gather information.
+
+
+ 
+
+
+
+ \textbf{Identity\^A†}
+
+
+
+ In an age of ubiquitous computing and omnipresent surveillance, privacy is a thing of the past\^aÄîwho you are and what you do is easily accessed online. Characters in \emph{Eclipse Phase,}
+ however, are often involved in secretive or less-than-legal activities, so the way to keep the bloggers, news, paparazzi, and law off your back is to make extensive use of fake IDs. While Firewall often provides cover identities for its sentinel agents, it doesn\^aÄôt hurt to keep a few extra personas in reserve, in case matters ever go out the airlock in a hurry. Thankfully, the patchwork allegiances of city-state habitats and faction stations means that identities aren\^aÄôt too difficult to fake, and the ability to switch morphs makes it even easier. On the other hand, anyone with a copy of your biometrics or geneprint will have an edge in tracking you down or finding any forensic traces you leave.\^A†
+
+
+ 
+
+
+
+ \textbf{Social Networks}
+
+
+
+ Social networks represent people the character knows and social groups with which they interact. These contacts, friends, and acquaintances are not just maintained in person, but rely heavily on the Mesh. Social software allows people to easily keep updated on what the people they know are doing, where they are and what they are interested in\^aÄîby the minute.\^A†
+
+
+ In game play, social networks are quite useful to characters. Their friends list is an essential resource\^aÄîa pool of people a character can use to poll for ideas, troll for news, listen to for the latest rumors, buy or sell gear from, hit up for expert advice, and even ask for favors (\emph{see Reputation and Social Networks, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ \textbf{Cred\^A†}
+
+
+
+ The Fall devastated the global economies and currencies of the past, and in the years of reconsolidation that followed, the hypercorps and governments inaugurated a new system-wide electronic monetary system. Called \emph{credit,}
+ this currency is backed by all of the large capitalist-oriented factions and is exchanged for goods and services as well as for other financial transactions. Credit is mainly transferred electronically, though certified credit chips are also common (and favored for their anonymity); hardcopy bills are used in some habitats.
+
+
+ 
+
+
+
+ \textbf{Rep\^A†}
+
+
+
+ Capitalism is no longer the only economy in town; in many areas its not money but \emph{reputation}
+ that matters. Your reputation score represents your social capital\^aÄîhow esteemed you are among your peers. Rep can be increased by positively influencing, contributing to, or helping individuals or groups, and it can be decreased with antisocial behavior. In anarchist habitats, your likelihood of obtaining things you need is based entirely on how you are viewed by others.
+
+
+ Reputation is easily measured by one of several online social networks. Your actions are rewarded or punished by those with whom you interact, who can ping your rep score with positive or negative feedback. All factions use these networks, as reputation can affect your social activities in capitalist economies as well. For more information, \emph{see Reputation and Social Networks, p. $<$OV$>$}
+.
+
+
+ 
+
+
+
+ Making Tests\^A†
+
+
+ In \emph{Eclipse Phase,}
+ characters are bound to find themselves in adrenalin-pumping action scenes, high-stress social situations, lethal combat, spine-tingling investigations, and similar situations filled with drama, risk, and adventure. When your character is embroiled in these scenarios, you determine how well they do by making tests\^aÄîrolling dice to determine if they succeed or fail, and to what degree.
+
+
+ You make tests in \emph{Eclipse Phase}
+ by rolling d100 and comparing the result to a target number. The target number is typically determined by one of your character\^aÄôs skills (discussed below) and ranges between 1 and 98. If you roll \emph{less than or equal to}
+ the target number, you succeed. If you roll \emph{higher}
+ than the target number, you fail.
+
+
+ A roll of 00 is \emph{always}
+ considered a success. A roll of 99 is \emph{always }
+a failure.
+
+
+ 
+
+
+
+ Target Numbers\^A†
+
+
+ As noted above, the target number for a d100 roll in \emph{Eclipse Phase}
+ is usually the skill rating. Occasionally, however, a different figure is used. In some cases, an aptitude score is used, making for a much harder test as aptitudes usually fall well below 50. In others, the target number is an aptitude rating x 2 or two aptitudes added together. In these cases, the test description notes what rating(s) to use.
+
+
+ 
+
+
+
+ \textbf{When to Make Tests\^A†}
+
+
+
+ The gamemaster decides when a character must make a test. As a rule of thumb, tests are called for whenever a character might fail at an action and when success or failure may have an effect on the ongoing story. Tests are also called for whenever two or more characters act in opposition to one another (for example, arm wrestling or haggling over a price). It is not necessary to make tests for everyday, run-of-the-mill activities, such as getting dressed or checking your email (especially in \emph{Eclipse Phase,}
+ where so many activities are automatically handled by the machines around you). Even an activity such as driving a car does not call for dice rolls as long as you have a modicum of skill. A test might be necessary, however, if you happen to be driving while bleeding to death or are pursuing a gang of motorcycle-riding scavengers through the ruins of a devastated city.
+
+
+ Knowing when to call for tests and when to let the roleplaying flow uninterrupted is a skill that every gamemaster must acquire. Sometimes it is better to simply make a call without rolling dice in order to maintain the pacing of the game. Likewise, in certain circumstances the gamemaster may decide to make tests for a character in secret, without the player noticing. If an enemy is trying to sneak past a character on guard, for example, the gamemaster will alert the player that something is amiss if they ask the player to make a perception test.\^A†
+
+
+ 
+
+
+
+ \textbf{Difficulty and Modifiers\^A†}
+
+
+
+ The measure of a test\^aÄôs difficulty is reflected in its \emph{modifiers.}
+ Modifiers are adjustments made to the target number (not the roll), either raising or lowering it. A test of average difficulty has no modifiers, whereas actions that are easier have positive modifiers (raising the target number, making success more likely) and harder actions have negative modifiers (lowering the target number, making success less likely).\^A†
+
+
+ Other factors might also play a role in a test, applying additional modifiers. These factors include the environment, equipment (or lack thereof) and the character\^aÄôs health, among other things. The character might be using superior tools, working in poor conditions, or even wounded, for example. Each of these factors must be taken into account, applying additional modifiers to the target number and affecting the likelihood of success or failure.
+
+
+ For simplicity, modifiers are applied in multiples of 10. The Test Difficulty Table and Modifier Severity Tables provide an easy reference for modifiers based upon the situation. The gamemaster must determine if a particular test is harder or easier than normal, and to what degree, and must apply appropriate modifiers as described above. Any number of modifiers may be applied, as the gamemaster deems appropriate, but the cumulative modifiers may not exceed plus or minus 60.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ Twitch is attempting to use his Free Fall skill (with a 65 rating) to quickly move through a derelict habitat, while something he does \emph{not}
+ want to encounter is chasing him.
+
+
+ Though the habitat is large, it\^aÄôs been abandoned for some time, lacks air pressure, is exposed to vacuum, and is cluttered with floating debris, making it a dangerous place to move through in the best of times. Therefore, after looking at the Test Difficulty and Modifier Severity tables, the gamemaster applies a Challenging Test Difficulty penalty of \^aÄì20. It gets worse, however. Twitch has just entered a section of the habitat where major battles occurred in the station\^aÄôs lost past, so the area is even more twisted and littered with junk. The gamemaster raises th emodifier to \^aÄì30. That means if Twitch is going to successfully use his Free Fall skill to navigate this section and escape whatever\^aÄôs hunting him\^aÄîall the while avoiding slamming into a bulkhead or impaling himself on a jagged piece of floating metal\^aÄîhe\^aÄôs got to make a d100 roll of 35 or less. Let\^aÄôs hope luck is with him today.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Criticals: Rolling Doubles\^A†}
+
+
+
+ Any time both dice come up with the same number\^aÄî00, 11, 22, 33, 44 and so on\^aÄîyou have scored a critical success or critical failure, depending on whether your roll also beats your target number. Double-zero (00) is always a critical success, whereas 99 is always a critical failure. Rolling doubles means that a little something \emph{extra }
+happened with the outcome of the test, either positive or negative. Criticals have a specific application in combat tests (\emph{see Step 5: Determine Outcome and Step 6: Modify Armor, p. $<$OV$>$}
+), but for all other purposes the gamemaster decides what exactly went wrong or right in a specific situation. Criticals can be used to amplify a success or failure: you finish with a flourish or fail so spectacularly that you remain the butt of jokes for weeks to come. They can also result in some sort of unexpected secondary effect: you repair the device \emph{and}
+ improve its performance, or you fail to shoot your enemy \emph{and}
+ hit an innocent bystander. Alternatively, a critical can give a boost to a follow-up action (or hinder one). For example, you not only spot the clue, but you immediately suspect it\^aÄôs a red herring; or you not only fail to strike the target, but your weapon breaks, leaving you defenseless. Gamemasters are encouraged to be inventive with their use of criticals and choose results that create comedy, drama or tension.
+
+
+ 
+
+
+
+ \textbf{Defaulting: Untrained Skill Use\^A†}
+
+
+
+ Certain tests may call for a character to use a skill they don\^aÄôt have\^aÄîa process called \emph{defaulting.}
+ In this case, the character instead uses the rating of the aptitude linked to the skill in question as the target number.
+
+
+ Not all skills may be defaulted on; some of them are so complex or require such intensive training that an unskilled character can\^aÄôt hope to succeed. Skills that may not be defaulted on are noted in italics on the Character Record Sheets.
+
+
+ In rare cases, a gamemaster might allow a character to default to another skill that also relates to a test. When allowed, defaulting to another skill incurs a \^aÄì30 modifier.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ EXAMPLE
+
+
+ Toljek has just arrived at a Jovian Junta habitat, trying to hide in plain sight by walking through the front hatch as though he belongs there. However, they don\^aÄôt just let anyone inside. At another station or with other groups, the gamemaster might allow the player to use his Persuasion or Deception Skill. However, because of that tight-knit society fabric, the gamemaster insists that Toljek use his Protocols Skill. Unfortunately, Toljek doesn\^aÄôt have that skill, so he has to default.
+
+
+ Protocol is linked to Savvy, so Toljek needs to make a SAV Test. What\^aÄôs worse, it\^aÄôs still difficult to get inside by talking his way in, so the gamemaster assigns a \^aÄì10 modifier. With a Savvy rating of 15, Toljek must roll a 5 or less on d100! Maybe he should\^aÄôve tried sneaking in.
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Teamwork\^A†}
+
+
+
+ If two or more characters join forces to tackle a test together, one of the characters must be chosen as the primary actor. This leading character is usually (but not always) the one with the highest applicable skill. The primary acting character is the one who rolls the test, though they receive a +10 modifier for each additional character helping them out (up to the maximum +60 modifier).
+
+
+ 
+
+
+
+ Types of Tests\^A†
+
+
+ There are two types of tests: Success and Opposed.
+
+
+ 
+
+
+
+ Success Tests
+
+
+ Success Tests are called for whenever a character is acting without direct opposition. They are the standard tests used to determine how well a character exercises a particular skill or ability.
+
+
+ Success Tests are handled exactly as described under \emph{Making Tests, p. $<$OV$>$}
+. The player rolls d100 against a target number equal to the character\^aÄôs skill +/\^aÄì modifiers. If you roll equal to or less than the target number, the test succeeds, and the action is completed as desired. If you roll higher than the target number, the test fails.
+
+
+ 
+
+
+
+ \textbf{Trying Again}
+
+
+
+ If you fail, you can always try again. Each subsequent attempt at an action after a failure, however, incurs a cumulative \^aÄì10 modifier. That means the second try suffers \^aÄì10, the third \^aÄì20, the fourth \^aÄì30 and so on, up to the maximum \^aÄì60.
+
+
+ 
+
+
+
+ \textbf{Taking the Time}
+
+
+
+ Most skill tests are made for Automatic, Quick or Complex Actions (p. $<$OV$>$) and so are resolved within one Action Turn (3 seconds). Tests made for Task actions (p. $<$OV$>$) take longer.
+
+
+ Players may choose to \emph{take the time}
+ when their character undertakes an action, meaning they choose to take extra time to complete the test in order to raise the odds of success. For every minute of extra time they take, they increase their chances by +10. Once they\^aÄôve modified their target number to over 99, they are practically guaranteed success, so the gamemaster can waive the dice roll and grant them an automatic success. The maximum +60 modifier rule still applies, so if a character\^aÄôs skill is under 40 to start with, taking the time still may not guarantee a favorable outcome. Players may take the time even when defaulting (p. $<$OV$>$).
+
+
+ Taking the time is a solid choice when time is not a factor for the character, as it eliminates the chance of rolling a critical failure and allows the player to skip needless dice rolling. For certain tests it may not be appropriate, however, if the gamemaster decides that no amount of extra time will increase the likelihood of success. In that case, the gamemaster simply rules that taking the time has no effect.
+
+
+ For Task action tests (p. $<$OV$>$), which already take time to complete, the duration of the task must be increased by 50 percent for each +10 modifier for taking the time.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ Srit is attempting to create a unique modification for her morph. It\^aÄôs not something she can buy on the open market and she can\^aÄôt find it through her networks, so she\^aÄôs taken advantage of a company\^aÄôs nanofabrication unit; they don\^aÄôt have nearly the security they think they do. She\^aÄôs got her own nanofabrication unit, of course, but for what she wants to do the gamemaster has told her she needs something more robust.
+
+
+ Though she\^aÄôs on a clock, she\^aÄôs got a pretty low Programming skill and the gamemaster is going to pile on the modifiers for the difficulty of this Task Action Test. The GM has already told her it\^aÄôll take 10 minutes. She can\^aÄôt risk staying inside more than 20 minutes, as she\^aÄôs got to leave room for the machine to finish and for her to slide out, leaving the company none the wiser, before her window closes. She spends an additional 5 minutes (50 percent of the original 10 minutes for the task), for a total of 15 minutes to receive an additional +10 modifier to her Programming Skill Test.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Margin of Success/Failure}
+
+
+
+ At times, a character may not only need to succeed, but kick ass and take names while doing it. This is usually true of situations where the challenge is not only difficult but the action must be pulled off with a fair bit of finesse. Tests of this sort may call for a certain \emph{Margin of Success (MoS)}
+\^aÄîan amount by which the character must roll under the target number. For example, a character facing a target number of 55 and an MoS of 20 must roll equal to or less than a 35 to succeed at the level called for by the situation.
+
+
+ At other times, it may be important to know how badly a character fails, as determined by a \emph{Margin of Failure (MoF)}
+\^aÄîthe amount by which the character rolled over the target number. In this case, a test may note that a character that fails with a certain MoF may suffer additional consequences for failing so dismally.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ Srit makes the roll for her Programming Skill Test, d100 against a target number of 30. With a result of 21, she succeeds! Just in case it\^aÄôs needed, she notes her MoS of 9.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ Opposed Tests\^A†
+
+
+ An Opposed Test is called for whenever a character\^aÄôs action may be directly opposed by another. Regardless of who initiates the action, both characters must make a test in contest with each other, with the outcome favoring the winner.
+
+
+ To make an Opposed Test, each character rolls d100 against a target number equal to their skill +/\^aÄì modifiers. If only one of the characters succeeds (rolls equal to or less than their target number), that character has won. If both succeed, the character that gets the highest dice roll wins. If both characters fail, or they both succeed but roll the same number, a deadlock occurs\^aÄîthe characters remain contested until one of them has another action and either breaks away or makes another Opposed Test.
+
+
+ Care must be taken when applying modifiers in an Opposed Test. Some modifiers affect both participants equally, and should be applied to both tests. If a modifier arises from one character\^aÄôs advantage in relation to the other, however, that modifier should only be applied to benefit the favored character; it should not also be applied as a negative modifier to the disadvantaged character (in order to avoid double jeopardy).
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ EXAMPLE
+
+
+ Kylor was a member of a pirate band working between the asteroid belt and the Jovian Junta habitats, raiding Scum longhaulers (one of their favorite pastimes). Despite his deep and long relationship with the leader of the group, Xtyl, when given the opportunity Kylor betrayed them all.
+
+
+ Xtyl is out of jail and has a new pirate band together. Kylor\^aÄôs been hired to infiltrate this group and bring them down again. Even though he\^aÄôs re-sleeved from a skin to a shell to help hide his identity\^aÄîhe never wore a synthetic morph around Xtyl\^aÄîthe gamemaster determines that at their first meeting, Xtyl might still recognize Kylor\^aÄôs mannerisms. They lived, whored, and raided together for almost a decade, after all.
+
+
+ Luckily for Kylor, he\^aÄôs rolling against his Disguise skill, while Xtyl is rolling against her Intuition aptitude.\^A† However, the gamemaster decides to throw a +20 bonus toward Xtyl \^aÄ$|$ she has a gut instinct that has gotten her out of half a dozen situations where she should\^aÄôve died, including Kylor\^aÄôs betrayal. And she has a burning itch for revenge against him, if she ever finds him.
+
+
+ Kylor rolls d100 against a target number of 70, with a result of 54. Xtyl rolls d100 against a target number of 35 with a result of 23. Though they both succeeded, Kylor rolled the higher number and so manages to dupe his former comrade. He is accepted into the fold.
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Opposed Tests and Margin of Success/Failure}
+
+
+
+ In some cases, it may also be important to note a character\^aÄôs margin of success or failure in an Opposed Test, as with a Success Test above. In this case, the MoS/MoF is still determined by the difference between the character\^aÄôs roll and their target number\^aÄîit is \emph{not}
+ calculated by the difference between their roll and the opposing character\^aÄôs roll.
+
+
+ 
+
+
+
+ Network intrusion
+
+
+ Often players will need to go beyond simply accessing the mesh and instead hack into a secured area to find the information they\^aÄôre hunting. Whether sneaking wirelessly into a user\^aÄôs ecto or breaking into a heavily monitored hard network, the actual penetration of a network\^aÄôs defenses is the true challenge facing an intruder.\^A†
+
+
+ 
+
+
+
+ Establishing a Connection
+
+
+ Intruding on a network requires the establishment of a data connection to the target computer system. If the network is wireless, then a simple Network Intrusion Test is made. If the network is a hardwired, the hacker must first physically jack into it by using a regular jacking port or somehow patch into it by tapping into a cable that is part of the network\^aÄôs data traffic, and then must make a Network Intrusion Test.
+
+
+ 
+
+
+
+ \textbf{Network Intrusion Test}
+
+
+
+ To hack a network, a player makes an Intrusion Test using Infosec skill. The gamemaster applies a modifier based on the difficulty of the network in question, using the Test Difficulty and Modifier Severity Tables (p. 11). For example, trying to slip into a local detection system to find his client list might only apply a \^aÄì10 modifier, but attempting to hack into a darkcast database to see who made the latest illegal egocast could apply a \^aÄì40 or even \^aÄì50 modifier penalty.
+
+
+ 
+
+
+
+ \textbf{Subversion}
+
+
+
+ Once in a network, a character may attempt to obtain information, mess with the systems controlled by the network, or hijack the entire network. To subvert the network, the intruder must succeed in a Subversion Success Test made with the Interfacing Skill.\^A†
+
+
+ The difficulty of the test depends on the severity of subversion the character wants to achieve (see Subversion Difficulties Table). For example, monitoring the traffic of a network is a rather simple task (adding a positive modifier to the test), but crashing or totally subverting a network (colloquially known as zombifying) is demanding and hard to accomplish.
+
+
+ \^A†
+
+
+\begin{tabular}{c}
+
+
+ Scofas needs to drop the lights in a quarter of the longhauler they\^aÄôre currently on. They\^aÄôve been incognito as vacworkers to repair the ancient vessel and they\^aÄôre nearing the spot where their ship has been hiding in wait. It\^aÄôs time to grab their target morph who\^aÄôs fleeing justice from the inner system and hop ship. The team is ready, now they just need Scofas to work his magic.
+
+
+ He first makes a Network Intrusion Test. Even on this decrepit tub they\^aÄôve got wireless, and so he\^aÄôs able to keep well hidden as he tries to mesh. What\^aÄôs more, the longhauler\^aÄôs battered state (why would anyone want anything on this tub?) and the fact that they\^aÄôve been on it for months keeping their heads down earns Scofas a +20 modifier from the gamemaster for the test, giving him a final target number of 80. He rolls a 21!\^A†
+
+
+ Next, it\^aÄôs time to subvert the network. Scofas is only supposed to try to turn off the light, but he goes for broke to shut down the entire system in this section of the ship. A \^aÄì30 modifier for the shut down network subversion attempt is applied to Scofas\^aÄô Infosec skill of 60, so he\^aÄôs rolling against a target number of 30.\^A†
+
+
+ The controlling player of Scofas realizes that the chances of rolling 30 or less on d100 are pretty slim. Before the dice are rolled he has a change of heart and decides to spend a point of Moxie to guarantee a successful roll. The entire mesh in that area goes silent and his team moves into action.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ Reputation and Social Networks\^A†
+
+
+ The reputation economy is one in which the material plenty created by micro-manufacturing and the longevity granted by uploading and backups have removed considerations of supply versus scarcity from the economic equation. However, material abundance hasn\^aÄôt eliminated the value of certain goods and services. What if you need gene therapy on your morph to grow infrared sensing cells on your face? How about someone to assassinate your renegade beta fork after she set off a hallucinogen grenade at your gallery opening and kidnapped your boyfriend? You call on your social network. If your network is sufficiently deep and numerous, someone will help you out.
+
+
+ In the Inner System, the reputation economy doesn\^aÄôt replace money for the exchange of goods and services, but it does hold sway over the network of favors and influence. Calling on contacts, getting information and making sure you\^aÄôre in the best place to see and be seen all involve calling on your social network.\\ 
+
+
+
+ Social Networks\^A†
+
+
+ Social networks represent the people you know, and the people they know, and so on. In the always-online, fully-meshed universe of \emph{Eclipse Phase}
+, this goes even further, encompassing all the people you\^aÄôve linked to via social mesh networks, everyone who watches your blog/lifelog/updates, and everyone you interact with on various mesh forums.
+
+
+ The exact uses for which you may exploit your social networks are noted below. While in some cases, the defining element is who you know and how good you are at reaching out to them, in others the defining element is how known you are. You might be connected to thousands of people, but if you don\^aÄôt have clout, your efforts to make use of these connections are limited. This is where reputation comes into play.
+
+
+ 
+
+
+
+ Reputation\^A†
+
+
+ Reputation is a measurement of your social currency. In the gift economies of the Outer System, social reputation has effectively replaced money. Unlike credit, however, reputation is far more stable.
+
+
+ In \emph{Eclipse Phase}
+, reputation scores are facilitated by online social networks. Almost everyone is a member of one or more of these reputation networks, and it is a trivial matter to ping the current rep score and history of someone you are dealing with\^aÄîyour muse often does this automatically, marking an entoptic rep score badge on anyone with whom you interact, updated in real time, so you will see if they suddenly take a hit or become popular. The seven most common networks are noted in the Reputation Networks sidebar.
+
+
+ The characters in these quick-start rules begin with pre-defined rep scores, which may be raised or lowered during game play according to your character\^aÄôs actions.
+
+
+ 
+
+
+
+ Using Networks and Rep\^A†
+
+
+ In game terms, you take advantage of your connections and personal cred every time you need a favor or service. A service is broadly defined as anything you try to get via your social networks: information, aid, goods and so on. \^A†
+
+
+ 
+
+
+
+ \textbf{The Networking Test}
+
+
+
+ If a character needs any commodity, the player simply makes a Networking Test to determine if they can secure what they\^aÄôre looking for. The Networking Test is a Task Test that requires 60 minutes; each additional try still requires 60 minutes. How long it takes to receive the goods after they have been found (if they are a physical item that cannot be found locally) is up to the discretion of the gamemaster.
+
+
+ The Networking Test is based on the character\^aÄôs rep score level in a given network. For example, a character might have a 60 rep in the @-list, but only a 20 rep in Guanxi (see Reputation Networks sidebar). As usual, the gamemaster applies a modifier from the Test Difficulty and Modifier Severity tables (p. 11) based on the difficulty (or ease) of acquiring the commodity in question. A success means the character has acquired the commodity. A failure means the item in question (whether a person, information, product and so on) is not available to that character at the current time.
+
+
+ A player can try another Networking Test for the same commodity, but each attempt applies a \^aÄì10 modifier. The player can only make four attempts for a particular commodity (up to a maximum \^aÄì30 modifier) in a single 24-hour period.
+
+
+ Gamemasters should use their discretion as to how much roleplay interaction and Networking Tests are included in using a social network. For normal goods, straightforward information queries or small favors, dice rolling or roleplaying may not be required. For major requests, interactions with contacts, and mission assistance, dice rolls and roleplay interaction with the social network contacts used should usually occur.
+
+
+ The following are some examples of ways to use rep score and networking, based upon modifiers from the Test Difficulty tables.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ Vijay needs some backup on a solo mission. He\^aÄôll be planting some nanoscale recording devices in a hypercorp bio-experimentation facility. Sneaking the tiny robots inside will take all of his concentration, so he asks Blythe, anarchist hacker in his @-Rep social network, to act as his lookout throughout the mission. Briefing, doing the job, and cleaning up will take the better part of a day and has a minor element of risk. The gamemaster, after referencing the Test Difficulty and Modifier Severity tables, therefore assigns the roll a \^aÄì10 modifier. With a Rep Score of 55 for the @-list, Vijay now has to roll 45 or less on d100. Rolling, he comes up with a 79. That\^aÄôs not going to do it. He really needs to make his move now and so despite having to spend another 60 minutes, he tries again, knowing the gamemaster is going to apply an additional \^aÄì10 modifier. He rolls a 34, just under the 35 he needs!\^A†
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ Action and Combat\^A†
+
+
+ Game play in \emph{Eclipse Phase}
+ is broken down into intervals called Action Turns. Each Action Turn is 3 seconds in length (meaning there are 20 Action Turns per minute). The order in which characters act during a turn is determined by an Initiative Test (\emph{see Initiative, p. $<$OV$>$}
+). Each character is limited in the amount of actions they can take in a turn, as determined by their Speed stat (\emph{see Speed, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ Action turns\^A†
+
+
+ Action Turns are meant to be used for combat and other situations where timing and the order in which people act is important. If it is not necessary to keep track of who\^aÄôs doing what so minutely, you can drop out of Action Turns and return to \^aÄúregular\^aÄù freeform game time.
+
+
+ Each Action Turn is broken down into distinct stages:
+
+
+ 
+
+
+
+ \textbf{Step 1: Roll Initiative\^A†}
+
+
+
+ At the beginning of every Action Turn, each character involved in the scene rolls Initiative to determine the order in which each acts. For more details, see \emph{Initiative}
+, p. $<$OV$>$.
+
+
+ 
+
+
+
+ \textbf{Step 2: Begin First Action Phase\^A†}
+
+
+
+ Once Initiative is rolled, the first Action Phase begins. Everyone gets to act in the first Action Phase (since everyone has a minimum Speed of 1), unless they happen to be unconscious/dead/disabled, starting with the character with the highest successful Initiative roll.\^A†
+
+
+ 
+
+
+
+ \textbf{Step 3: 
+ Declare and Resolve Actions\^A†}
+
+
+
+ The character going first now declares and resolves the actions they will take during this first Action Phase. As some actions the character makes may depend on the outcome of others, there is no need to declare them all first\^aÄîthey may be announced and handled one at a time.
+
+
+ As described under Types of Actions (p. $<$OV$>$), each character may perform a varying number of Quick Actions and/or a single Complex Action during their turn. Alternatively, a character may begin or continue with a Task Action, or delay their action pending other developments (p. $<$OV$>$).
+
+
+ A character who has delayed their action may interrupt another character at any point during this step. That interrupting character must complete this step in full, then the action returns to the interrupted character to finish the rest of their step.
+
+
+ 
+
+
+
+ \textbf{Step 4: Rotate and Repeat\^A†}
+
+
+
+ Once the character has resolved their actions for that phase, the next character in the Initiative order gets to go, running through Step 3 for themselves.
+
+
+ If every character has completed their actions for that phase, return to Step 2 and go to the second Action Phase. Every character with a Speed of 2 or more gets to go up through Step 3 again, in the same Initiative order. Once the second Action Phase is completed, return to Step 2 for the third Action Phase, where every character with a Speed of 3 or more gets to go for a third time. Finally, after everyone eligible to go in the third Action Phase has gone, return to Step 2 for a fourth and last Action Phase, where every character with a Speed of 4 can act for one final time.
+
+
+ At the end of the fourth Action Phase, return to Step 1 and roll Initiative for the next Action Turn.\^A†
+
+
+ 
+
+
+
+ Initiative\^A†
+
+
+ Timing in an Action Turn can be critical\^aÄîit may mean life or death for a character who needs to get behind cover before an opponent draws and fires his gun. The process of rolling Initiative determines if a character acts before or after another character.
+
+
+ 
+
+
+
+ \textbf{Initiative Order\^A†}
+
+
+
+ A character\^aÄôs Initiative stat is equal to their Intuition + Reflexes aptitudes x 2, or: (INT + REF) x 2. This score may be further modified by morph type, implants, drugs or wounds; for these quick-start rules, such modifiers are automatically reflected in the applicable character\^aÄôs Initiative stat as noted on the record sheet.
+
+
+ In the first step of each Action Turn, every character makes an Initiative Test, rolling d100 and adding their Initiative stat. Whomever rolls highest goes first, followed by the other characters in descending order, highest to lowest. In the event of a tie, characters go simultaneously.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ EXAMPLE
+
+
+ Adam, Bob and Cami are rolling Initiative. Adam\^aÄôs Initiative stat is 40, Bob\^aÄôs is 55 and Cami\^aÄôs is 30. Adam rolls a 38, Bob rolls a 24 and Cami rolls a 76. Adam\^aÄôs total Initiative score is 78 (40 + 38), Bob\^aÄôs is 79 (55 + 24) and Cami\^aÄôs is 106 (30 + 76). Cami rolled highest, so she goes first, followed by Bob and then Adam. If Bob and Adam had tied, they would both go at the same time.\^A†
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Initiative and Damage}
+
+
+
+ Characters suffering from wounds have their Initiative score temporarily reduced (\emph{see Wounds, p. $<$OV$>$}
+). This modifier is applied immediately when the wound is taken, which means it may modify an Initiative score in the middle of an Action Turn.\^A† If a character is wounded before they go in that Action Phase, their Initiative is reduced accordingly, which may mean they now go after someone they were previously ahead of in the Initiative order.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ In the first turn of combat, the Initiative order is Cami, Bob and then Adam. However, after Cami takes an action, the opponent NPC takes an action and wounds Bob\^aÄôs character, dropping his Initiative by 10 from 79 to 69. This result means that after the NPC finishes his action, instead of Bob\^aÄôs character taking his actions, Adam\^aÄôs character takes his actions first, and then Bob\^aÄôs character finishes up the Action Phase with his actions.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{Initiative and Moxie}
+
+
+
+ A character may spend a point of Moxie to go first in an Action Phase, regardless of their Initiative roll (\emph{see Moxie, p. $<$OV$>$}
+). If more than one character chooses this option, then order is determined as normal first among those who spent Moxie, followed by those who didn\^aÄôt.
+
+
+ \^A†\^A† \^A†
+
+
+ Speed\^A†
+
+
+ Speed determines how many times a character can act during an Action Turn. Every character starts with a default Speed stat of 1, meaning they can act in the first Action Phase of the turn only. Certain morphs, implants, drugs and other factors may increase their Speed to 2, 3 or even 4 (the maximum), allowing them to act in further Action Phases as well. For example, a character with Speed 2 can act in the first and second Action Phases, and a character with Speed 3 can act in the first through third Action Phases. A character with Speed 4 is able to act in every Action Phase. This represents the character\^aÄôs enhanced reflexes and neurology, allowing them to think and act much faster than non-enhanced characters. As with Initiative, for these quick-start rules, such modifiers are automatically reflected in a character\^aÄôs Initiative stat as noted on the record sheet.
+
+
+ If a character\^aÄôs Speed does not allow them to act during an Action Phase, they can initiate no actions during that pass. Such characters may still defend themselves, and any automatic actions remain \^aÄúon\^aÄù (\emph{see Automatic Actions, p. $<$OV$>$}
+). Any movement the character initiated is considered still underway even during the Action Phases in which they do not participate (see \emph{Movement}
+, below).
+
+
+ 
+
+
+
+ Movement\^A†
+
+
+ Movement in \emph{Eclipse Phase}
+ is handled just like any other action, and may change from Action Phase to Action Phase. Walking and running both count as Quick Actions, as they do not require your full concentration. The same applies to slithering, crawling, floating, hovering or gliding. Running, however, may inflict a \^aÄì10 modifier on other actions that are affected by the jostling movement. Even more, sprinting is an all-out run, and so requires a Complex Action.
+
+
+ At the gamemaster\^aÄôs discretion, other movement may also call for a Complex Action. Hurdling a fence, pole vaulting, jumping from a height, swimming, or free-running through a habitat in zero-gravity all require a bit of finesse and attention to detail, and so would count as Complex Actions and would apply the same modifier as running. Flying generally counts as a Quick Action, though intricate maneuvers call for a Complex Action.
+
+
+ 
+
+
+
+ \textbf{Movement Rates\^A†}
+
+
+
+ Sometimes it\^aÄôs important to know not just how you\^aÄôre moving, but how far. For most of transhumanity, this movement rate is the same: 4 meters per Action Turn walking, 20 meters per turn running. That breaks down to 1 meter walking per Action Phase, 5 meters running. Movement such as swimming or crawling benchmarks at about 1 meter per Action Turn, or 0.25 meters per Action Phase.\^A†
+
+
+ If the player spends a Complex Action, their character can sprint up to 30 meters per turn.
+
+
+ Vehicles, robots, creatures and unusual morphs have individual movement rates listed in the format of walking rate/running rate in meters per turn.
+
+
+ 
+
+
+
+ Types of Actions\^A†
+
+
+ The types of actions a character may take in an Action Turn are \emph{Automatic, Quick, Complex }
+and \emph{Task }
+actions\emph{.}
+
+
+
+ 
+
+
+
+ \textbf{Automatic Actions\^A†}
+
+
+
+ Automatic Actions are \^aÄúalways on\^aÄù and require no effort from the character, assuming the character is conscious.\^A†
+
+
+ Examples: basic perception.
+
+
+ 
+
+
+
+ \textbf{Quick Actions\^A†}
+
+
+
+ Quick Actions are simple and easy; they can be done fast and can be multi-tasked. The gamemaster determines how many Quick Actions a character may take in a turn.\^A†
+
+
+ Examples: talking, switching a safety, activating an implant, standing up.\^A†
+
+
+ 
+
+
+
+ \textbf{Complex Actions\^A†}
+
+
+
+ Complex Actions require dedicated concentration or effort. The number of Complex Actions a character may take per turn is determined by their Speed stat (\emph{see Speed (SPD), p. $<$OV$>$}
+).\^A†
+
+
+ Examples: attacking, shooting, acrobatics, disarming a bomb, detailed examination.\^A†
+
+
+ 
+
+
+
+ \textbf{Task Actions\^A†}
+
+
+
+ Task actions are any action that requires longer than 1 Action Turn to complete. Each Task Action has a \emph{timeframe,}
+ usually listed in the task description or otherwise determined by the gamemaster. The timeframe determines how long the task takes to complete, though this may be reduced by 10 percent for every 10 full points of MoS the character scores on the test (\emph{see Margin of Success/Failure, p. $<$OV$>$}
+). If a character fails on a Task Action test roll, they work on the task for a minimum period equal to 10 percent of the timeframe for each 10 full points of MoF before realizing it\^aÄôs a failure.\^A†
+
+
+ For Task Actions with timeframes of 1 day or longer, it is assumed that the character only works 8 hours per day. A character that works more hours per day may reduce the time accordingly. Characters working on Task Actions may also interrupt their work to do something else, picking up where they left off, unless the gamemaster rules that the action requires continuous and uninterrupted attention.
+
+
+ Similar to taking the time (p. $<$?$>$), a character may \emph{rush the job}
+ on a Task Action, taking a penalty on the test in order to decrease the timeframe. The character must declare they are rushing the job before they roll the test. For every 10 percent they reduce the timeframe, they incur a \^aÄì10 modifier on the test (to a maximum reduction of 60 percent and a maximum modifier of \^aÄì60).
+
+
+ 
+
+
+
+ \textbf{Delayed Actions\^A†}
+
+
+
+ When it\^aÄôs your turn to go during an Action Phase, you may decide you\^aÄôre not ready to act yet. You may be awaiting the outcome of another character\^aÄôs actions, hoping to interrupt someone else\^aÄôs action, or may simply be undecided about what to do. In this case, you may opt to delay your action.
+
+
+ \^A†When you delay your action, you\^aÄôre putting yourself on standby. At some later point in that Action Phase, you can announce that you are now taking your action\^aÄîeven if you interrupt another character\^aÄôs action. In this case, all other activity is put on hold until your action is resolved. Once your action has taken place, the Initiative order continues where you interrupted.
+
+
+ You may delay your action into the next Action Phase, or even the next Action Turn, but if you do not take it by the time your next action comes around in the Initiative order, then you lose it. Additionally, if you do delay your action into another phase or turn, then once you take it you lose any action you might have in that Action Phase.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ In an Action Turn, the Initiative order is Bob, Cami and then Adam. However, Bob\^aÄôs character is a dozen meters back from the main scene of the combat, having just turned the corner in the habitat when Cami and Adam\^aÄôs characters were ambushed. Additionally, the line of sight from Bob\^aÄôs character to the opponent NPC is blocked at this point. So he decides to delay his action to see how the scene unfolds.
+
+
+ Cami\^aÄôs character takes her action and steps to the side as she fires her weapon. According to the Initiative order, it\^aÄôs now time for the NPC to take his action. However, since Cami moved aside, Bob\^aÄôs character now has line of sight, so he immediately interrupts the order of action and takes a shot. The shot hits and wounds the NPC. After Bob\^aÄôs character\^aÄôs action is finished, Initiative would normally have returned to the NPC, but the wound dropped that NPC\^aÄôs Initiative below that of Adam\^aÄôs character. This means Adam\^aÄôs character takes his action first and then finally the NPC ends that Action Phase by taking their turn.
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ Combat\^A†
+
+
+ Sometimes words fail, and that\^aÄôs when the knives and guns come out. All combat in \emph{Eclipse Phase}
+ is conducted using the same basic mechanics, whether it\^aÄôs conducted with claws, fists, guns or other weapons: an Opposed Test between the attacker and defender(s).
+
+
+ 
+
+
+
+ Resolving Combat\^A†
+
+
+ Use the following sequence of steps to determine the outcome of an attack.
+
+
+ \textbf{\\ 
+ Step 1: Declare Attack}
+
+
+
+ The attacker initiates by taking a Complex Action to attack on their turn during an Action Phase. The skill employed depends on the method used to attack. If the character lacks the appropriate Combat skill, they must default to the appropriate linked aptitude.
+
+
+ 
+
+
+
+ \textbf{Step 2: Declare Defense}
+
+
+
+ Once the attack is declared, the defender chooses how to respond. Defense is always considered an Automatic Action unless the defender is somehow incapacitated and incapable of self-defense.
+
+
+ \textbf{Melee:}
+ A character defending against melee attacks uses their Fray skill, representing dodging (a character lacking this skill may default to Reflexes).\^A†
+
+
+ \textbf{Ranged:}
+ Against ranged attacks, a defending character may only use half their Fray skill (round down).
+
+
+ \textbf{Full Defense:}
+ Characters who have taken a Complex Action to go on full defense (p. $<$OV$>$) receive a +30 modifier to their defensive roll.
+
+
+ 
+
+
+
+ \textbf{Step 3: Apply Modifiers}
+
+
+
+ Any appropriate modifiers are now applied to the attacker\^aÄôs and defender\^aÄôs skills. See the Combat Modifiers Table (p. 19) for common situational modifiers.
+
+
+ 
+
+
+
+ \textbf{Step 4: Make the Opposed Test}
+
+
+
+ The attacker and defender both roll d100 and compare the results to their modified skill target numbers.
+
+
+ 
+
+
+
+ \textbf{Step 5: Determine Outcome\^A†}
+
+
+
+ If the attacker succeeds and the defender fails, the attack hits. If the defender succeeds but the attacker fails, the attack misses completely.
+
+
+ If attacker and defender succeed in their tests, compare their dice rolls. If the attacker\^aÄôs dice roll is higher, the attack hits despite a spirited defense; otherwise, the attack fails to connect.
+
+
+ If the defender rolls a critical success, the attacker\^aÄôs weapon breaks, jams, gets stuck somewhere, or otherwise malfunctions or gets dropped.
+
+
+ 
+
+
+
+ \textbf{Step 6: Modify Armor}
+
+
+
+ If the target is hit, their armor will help to protect them against the attack. Determine which type of armor is appropriate to defending against that particular attack (\emph{see Armor, p. $<$OV$>$}
+). The attack\^aÄôs Armor Penetration (AP) value reduces the armor\^aÄôs rating, however, representing the weapon\^aÄôs ability to pierce through protective measures.
+
+
+ If the attacker rolls a critical success, the attack is armor-defeating, meaning that the defender\^aÄôs armor is bypassed\^aÄîsome kink or flaw was exploited, allowing the attack to get through.
+
+
+ 
+
+
+
+ \textbf{Step 7: Determine Damage}
+
+
+
+ Every weapon and type of attack has a Damage Value (DV; p. $<$OV$>$). This amount is reduced by the target\^aÄôs AP-modified armor rating. If the damage is reduced to 0 or less, the armor is effective and the attack fails to injure the target. Otherwise, any remaining damage is applied to the defender. If the accumulated damage exceeds the defender\^aÄôs Durability, they are incapacitated and may die (\emph{see Durability and Health, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ \textbf{Step 8: Determine Wounds}
+
+
+
+ The damage inflicted from a single attack is then compared to the victim\^aÄôs Wound Threshold. If the armor-modified DV equals or exceeds the Wound Threshold, the character suffers a \emph{wound.}
+ Multiple wounds may be applied with a single attack if the modified DV is two or more factors beyond the Wound Threshold. Wounds represent more serious injuries and apply modifiers and other effects to the character (\emph{see Wounds, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ Combat Factors and Complications\^A†
+
+
+ Combat isn\^aÄôt quite as simple as deciding if you hit or miss. Weapons, armor and numerous other factors may affect an attack\^aÄôs outcome.
+
+
+ Firing Modes and Rate of Fire\^A†
+
+
+ Every ranged weapon in \emph{Eclipse Phase}
+ comes with one or more firing modes that determine their rate of fire. These firing modes are described in detail below; for these quick-start rules, each weapon on a character\^aÄôs record sheet notes which rate of fire applies.
+
+
+ 
+
+
+
+ \textbf{Single Shot (SS)}
+
+
+
+ May only be fired once per Complex Action.
+
+
+ 
+
+
+
+ \textbf{Semi-Automatic (SA)}
+
+
+
+ Semi-automatic weapons are capable of quick, repeated fire. They may be fired twice with the same Complex Action. Each shot is handled as a separate attack.\^A†
+
+
+ 
+
+
+
+ \textbf{Burst Fire (BF)}
+
+
+
+ Burst-fire weapons release a number of quick shots (a \^aÄúburst\^aÄù) with a single trigger pull. Two bursts may be fired with the same Complex Action. Each burst is handled as a separate attack. Bursts use up to 3 shots\^aÄô worth of ammunition.
+
+
+ A burst may be shot against a single target (concentrated fire), or against two targets standing within one meter of each other. In the case of concentrated fire against a single target, double the applied DV.
+
+
+ 
+ Bots, Synthmorphs and Vehicles
+
+
+ AI-operated robots and synthetic morphs are a common sight in \emph{Eclipse Phase}
+. Robots are used for a wide range of purposes, from surveillance, maintenance and service jobs to security and policing\^aÄîand so may often play a role in action and combat scenes. Though less common (at least in habitats), AI-piloted vehicles are also frequently used and encountered. (Though vehicles are also robotic\^aÄîdriven by an AI\^aÄîthe term \^aÄúvehicle\^aÄù is used to denote that it is designed to carry passengers.)
+
+
+ Like synthmorphs, bots and vehicles are treated just like any other character: they roll Initiative, take actions and use skills. A few specifics merit special consideration.
+
+
+ \textbf{\\ 
+ Bot and Vehicle Stats}
+
+
+
+ Just like synthmorphed characters, certain bot and vehicle stats (Durability, Wound Threshold, etc.) and stat modifiers (Initiative, Speed, etc.) are determined by the actual physical shell. Other stats are determined by the bot/vehicle\^aÄôs operating AI. Bots and vehicles may also have traits that apply to their AI or physical shell. Bots and vehicles have their own movement rates listed; for these quick-start rules, any bots and vehicles will include stats for their movement rates.\^A†
+
+
+ \textbf{Handling:}
+ Bots and vehicles have a special stat called Handling, which is a modifier applied to all tests made to pilot the bot/vehicle.
+
+
+ \textbf{\\ 
+ Bot and Vehicle Skills}
+
+
+
+ The skills and aptitudes used by a bot/vehicle are those possessed by its AI; for these quick-start rules, any bot and vehicle skills are included with the rest of its game stats.
+
+
+ 
+
+
+
+ \textbf{Crashing}
+
+
+
+ Bots and vehicles that suffer wounds during combat may be forced to make a Pilot Test to avoid crashing or may crash automatically. The exact circumstances of a crash are left up to the gamemaster, as best fits the story\^aÄîthe bot may simply skid to a stop, plow into a tree and fall from the sky, smash clear through the side of a building, or hit an obstruction, soar through the air, flip over and land on a group of bystanders. Bots and vehicles that strike other objects when they crash typically take further damage from the collision (up to the gamemaster\^aÄôs discretion).
+
+
+ 
+
+
+
+ Full Defense\^A†
+
+
+ If you\^aÄôre expecting to come under fire, you can expend a Complex Action to go on full defense. This represents the fact that you\^aÄôre expending all your energy to dodge, duck, ward off attacks and otherwise get the hell out of the way until your next Action Phase. During this time, you receive a +30 modifier to defend against all incoming attacks.\^A†
+
+
+ Characters on full defense may use Freerunning (if they posses it) rather than their Fray skill to dodge attacks, representing the gymnastic movements they are making to avoid being hit.
+
+
+ 
+
+
+
+ Armor\^A†
+
+
+ As noted in \emph{Step 7: Determine Damage}
+ (p. $<$OV$>$), the armor rating reduces the damage points of the attack.
+
+
+ 
+
+
+
+ \textbf{Energy vs. Kinetic Ratings}
+
+
+
+ Each type of armor has two ratings\^aÄîEnergy and Kinetic\^aÄîrepresenting the protection it applies against these respective types of attack. These ratings are listed in the format of \^aÄúEnergy armor/Kinetic armor.\^aÄù For example, an item with a listed armor rating of 5/10 provides 5 points of armor against energy-based attacks and 10 points of armor against kinetic attacks.
+
+
+ Energy damage includes damage caused by beam weapons (laser, plasma, etc.) as well as fire.
+
+
+ Kinetic damage is the transfer of energy when an object in motion (a fist, knife, club or bullet, for example) hits another object (the target).\^A†
+
+
+ 
+
+
+
+ \textbf{Armor Penetration}
+
+
+
+ Some weapons have an Armor Penetration (AP) rating. This represents the attack\^aÄôs ability to pierce protective layers. The AP rating reduces the value of armor used to defend against the attack (\emph{see Step 6: Modify Armor, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ \textbf{Layered Armor}
+
+
+
+ If two or more types of armor are worn, the armor ratings are added together. However, wearing multiple armor units is cumbersome and annoying. Apply a \^aÄì20 modifier to a character\^aÄôs actions for each additional armor layer worn.
+
+
+ Items specifically noted as armor accessories\^aÄîhelmets, shields, etc.\^aÄîdo not inflict the layered armor penalty; instead, they simply add their armor bonus. The armor inherent to a synthetic morph or bot\^aÄôs frame likewise does not constitute a layer of armor.
+
+
+ 
+
+
+
+ Physical Health\^A†
+
+
+ Two methods are used to gauge a character\^aÄôs physical health: damage points and wounds.
+
+
+ 
+
+
+
+ Damage Points
+
+
+ Any physical harm that befalls your character is measured in damage points. These points are cumulative, and are recorded on your Character Record Sheet. Any source of harm that inflicts a large amount of damage points at once, however, is likely to have a more severe effect (\emph{see Wounds, p. $<$OV$>$}
+).
+
+
+ 
+
+
+
+ \textbf{Damage Types\^A†}
+
+
+
+ Physical damage comes in two forms: Energy and Kinetic. The weapons listed on the Character Record Sheets\^aÄîas well as the NPCs in the adventure\^aÄîin these quick-start rules use generic names to easily identify their type, such as \^aÄúKinetic Pistol\^aÄù. The only exception are the Agonizer Pistol, which is an energy weapon, and the Shredder, which is a kinetic weapon.\^A†
+
+
+ 
+
+
+
+ \textbf{Durability and Health\^A†}
+
+
+
+ Your character\^aÄôs physical health is measured by their Durability stat. For characters sleeved in biomorphs, this figure represents the point at which accumulated damage points overwhelm the character and they fall unconscious. Once your character has accumulated damage points equal to or exceeding their Durability stat, they immediately collapse from exhaustion and physical abuse. They remain unconscious and may not be revived until their damage points are reduced below their Durability, either from medical care or natural healing.
+
+
+ If your character is morphed in a synthetic shell, Durability represents the shell\^aÄôs structural integrity. Your character becomes physically disabled when their accumulated damage points reach the character\^aÄôs Durability. Though the morph\^aÄôs computer systems are likely still functioning and your character can still mesh, the morph is broken and immobile until repaired.
+
+
+ \textbf{Death: }
+An extreme accumulation of damage points can threaten your character\^aÄôs life. If the damage reaches your character\^aÄôs Durability x 1.5 (for biomorphs) or Durability x 2 (for synthetic morphs), their body dies. Synthetic morphs that reach this state are destroyed beyond repair.\\ 
+
+
+
+ \textbf{Damage Value\^A†}
+
+
+
+ Weapons (and other sources of injury) in \emph{Eclipse Phase}
+ have a listed Damage Value (DV)\^aÄîthe base amount of damage points the weapon inflicts. This is presented as a variable amount, in the form of a die roll; for example, 3d10. In this case, you roll three ten-sided dice and add up the results (counting 0 as 10). Sometimes the DV will be presented as a dice roll plus modifier; for example, 2d10 + 5. In this case you roll two ten-sided dice, add them together and then add 5 to get the result.
+
+
+ When damage is inflicted on a character, determine the DV (roll the dice) and subtract the modified armor value, as noted under \emph{Step 7: Determine Damage}
+ (p. $<$OV$>$).
+
+
+ 
+
+
+
+ Wounds\^A†
+
+
+ Any time your character sustains damage, compare the amount inflicted (after it has been reduced by armor) to your character\^aÄôs Wound Threshold. If the modified DV equals or exceeds the Wound Threshold, your character has suffered a wound. If the inflicted damage is double the Wound Threshold, your character suffers 2 wounds; if triple the Wound Threshold, 3 wounds; and so on.
+
+
+ Wounds are cumulative and must be marked on the Character Record Sheet.
+
+
+ 
+
+
+
+ \textbf{Wound Effects}
+
+
+
+ Each wound applies a cumulative \^aÄì10 modifier to all of the character\^aÄôs actions. A character with 3 wounds, for example, suffers \^aÄì30 to all actions.
+
+
+ \textbf{Knockdown:}
+ Any time a character takes a wound, they must make an immediate SOM x 3 Test. Wound modifiers apply. If they fail, they are knocked down, and must expend a Quick Action to get back up. Bots and vehicles must make a Pilot Test to avoid crashing.
+
+
+ \textbf{Unconsciousness:}
+ Any time a character takes 2 or more wounds at once (from the same attack), they must also make an immediate SOM x 3 Test; wound modifiers again apply. If they fail, they have been knocked unconscious. Bots and vehicles that take 2 or more wounds at once automatically crash (\emph{see Crashing, p. $<$OV$>$}
+).
+
+
+ \textbf{Bleeding:}
+ Any biomorph character who has suffered a wound and who takes damage that exceeds their Durability is in danger of bleeding to death. They incur 1 additional damage point per Action Turn (20 per minute) until they receive medical care or die.
+
+
+ 
+
+
+
+ Mental Health\^A†
+
+
+ The mind-expanding setting of Eclipse Phase means mental health is often just as important as physical health. Two methods are used to gauge your character\^aÄôs mental health: stress points and trauma.
+
+
+ 
+
+
+
+ Stress Points\^A†
+
+
+ Stress points represent fractures in an ego\^aÄôs integrity, cracks in a character\^aÄôs mental self-image. Stress points may be reduced by long-term rest, psychiatric care and/or psychic surgery (all of which fall outside the purview of these rules.
+
+
+ 
+
+
+
+ \textbf{Lucidity and Stress\^A†}
+
+
+
+ The Lucidity stat benchmarks your character\^aÄôs mental stability. If your character builds up an amount of stress points equal to or greater than their Lucidity score, your character\^aÄôs ego immediately suffers a mental breakdown. The character effectively goes into shock and remains in a catatonic state until their stress points are reduced to a level below their Lucidity stat.\^A†
+
+
+ Extreme amounts of built-up stress points can permanently damage your character\^aÄôs sanity. If accumulated stress points reach your character\^aÄôs Lucidity x 2, your character\^aÄôs ego undergoes a permanent meltdown. The character\^aÄôs mind is lost, and no amount of psych help or rest will ever bring it back.
+
+
+ 
+
+
+
+ \textbf{Stress Value\^A†}
+
+
+
+ Any source capable of inflicting cognitive stress is given a Stress Value (SV). This indicates the amount of stress points the attack or experience inflicts on a character. Like DV, SV is often presented as a variable amount, such as 1d10, or sometimes with a modifier, such as 1d10 + 5. Simply roll the dice and total the amounts to determine the stress points inflicted in that instance.
+
+
+ 
+
+
+
+ Trauma\^A†
+
+
+ Traumas represent severe mental shocks, a crumbling of personality/self, delirium, paradigm shifts and other serious cognitive malfunctions. If your character receives a number of stress points at once that equals or exceeds their Trauma Threshold, they have suffered a trauma. If the inflicted stress points are double or triple the Trauma Threshold, they suffer 2 or 3 traumas, respectively, and so on. Traumas are cumulative and must be recorded on your Character Record Sheet
+
+
+ \textbf{\\ 
+ Trauma Effects}
+
+
+
+ Each trauma applies a cumulative \^aÄì10 modifier to all of the character\^aÄôs actions. A character with 2 traumas, for example, suffers a \^aÄì20 modifier to all actions. These modifiers are also cumulative with wound modifiers.
+
+
+ \textbf{Disorientation:}
+ Any time a character is inflicted with a trauma, they must make an immediate WIL x 3 Test. Trauma modifiers apply. If they fail, they are temporarily stunned and disoriented, and must expend a Quick Action to regain their wits.\^A†
+
+
+ \textbf{Derangements:}
+ Any time a character is hit with a trauma, they suffer a temporary derangement (see \emph{Derangements}
+, below). If a character is hit with multiple traumas, the gamemaster can decide to assign additional derangements, or increase the severity of one already inflicted on the character.
+
+
+ 
+
+
+
+\begin{tabular}{c}
+
+
+ Since Adam practically taunted the gamemaster in their last session after the quick combat, it\^aÄôs payback time. After entering another new area of the fallen colony on Mars, Adam\^aÄôs character runs into the aftermath of a nanoswarm attack against the inhabitants. Gruesome doesn\^aÄôt begin to describe it, with bodies half-eaten, others absorbed and changed into something \^aÄ$|$ else. Despite the hard-bitten nature of Adam\^aÄôs character, even he\^aÄôs never seen anything like this.
+
+
+ The gamemaster decides to roll a 2d10 Stress Value. He rolls with results of 4 and 7, netting him an 11. Adam notes down the 11 stress points. This is a little too close for comfort, as he already had 6 points of stress built up from previous events, bringing his total stress to 17. His Lucidity is only 20. If he gets 3 more points,\^A† he\^aÄôs going to lose his mind. Literally.
+
+
+ Additionally, the stress points equal more than twice his Trauma Threshold of 4, so Adam\^aÄôs character receives 2 traumas. This means a \^aÄì20 modifier is now applied to all the character\^aÄôs actions\^aÄîwhich is cumulative with any wounds the character might have\^aÄîand Adam has to make an immediate WIL x 3 Test for disorientation.
+
+
+ Finally, Adam\^aÄôs character has suffered 2 derangements. After a quick discussion with Adam, the gamemaster and he agree that his character will blank out for d10 seconds any time someone mentions nanoswarms, and then get the shakes for another 1d10 minutes after he \^aÄúreturns\^aÄù from this state.
+
+
+ Time for Adam\^aÄôs character to find some psychiatric help \^aÄ$|$ and perhaps not taunt the gamemaster next time!
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ Derangements\^A†
+
+
+ Derangements are temporary mental conditions that result from traumas, such as mood swings, nausea, anxiety, hallucinations and so on. The gamemaster and player should cooperate in choosing which derangement to apply, as appropriate to the scenario and the character\^aÄôs personality.\^A†
+
+
+ Derangements last for d10 \~A$\cdot$ 2 hours (round down), or until the character receives psychiatric help, whichever comes first. At the gamemaster\^aÄôs discretion, a derangement may last longer if the character has not been distanced from the source of the stress, or if they remain embroiled in other stress-inducing situations.
+
+
+ Derangement effects are meant to be roleplayed. The player should incorporate the derangement into their character\^aÄôs words and actions. If the gamemaster doesn\^aÄôt feel the player is stressing the effects enough, they can emphasize them. A gamemaster may also call for additional modifiers or tests for certain actions, if they seem appropriate.
+
+
+ For these quick-start rules, the adventure will note specific instances when the characters may run into a situation where a derangement may occur, as well as what the derangement is and its effects in the game.
+
+
+ \textbf{The Ultimate Rule}
+
+
+
+ There is one rule in \emph{Eclipse Phase}
+ that outweighs all of the others: have fun. Don\^aÄôt let the rules get in the way of the game. If you don\^aÄôt like a rule, change it. If you can\^aÄôt find a rule, make one up.
+
+
+ \textbf{A Note on Terminology and Gender}
+
+
+
+ The \emph{Eclipse Phase}
+ setting raises a number of interesting questions about gender and personal identity. What does it mean when you are born female but you are occupying a male body? When it comes to language and editing, this also poses a number of interesting questions for what pronouns to use. The English language has a bit of a bias towards male-gendered pronouns that we hope to avoid in these rules.
+
+
+ For purposes of this game, we\^aÄôve sidestepped some of these gender neutrality quandaries by adopting the \^aÄúSingular They\^aÄù rule. What this means is that rather than just going with male pronouns (\^aÄúhe\^aÄù) or switching between gendered pronouns (\^aÄúhe\^aÄù in one chapter, \^aÄúshe\^aÄù in the next), we have adopted the use of \^aÄúthey\^aÄù even when referring to a single person.\^A†
+
+
+ When referring to specific characters, we use the gendered pronoun appropriate to the character\^aÄôs personal gender identity, no matter the sex of the morph they are in. n
+
+
+ \textbf{Ego vs. Morph\^A†}
+
+
+
+ Your body is disposable. If your body gets old, sick, or too heavily damaged, you can digitize your consciousness and download it into a new one. The process isn\^aÄôt cheap or easy, but it does guarantee you effective immortality\^aÄîas long as you remember to back yourself up and don\^aÄôt go insane. The term \textbf{\emph{morph }
+}
+is used to describe any type of form your mind inhabits, whether it be a vat-grown clone sleeve, a synthetic robotic shell, a part-bio/part-flesh pod, or even the purely electronic software state of an infomorph.
+
+
+ A character\^aÄôs morph may die, but the character\^aÄôs ego may live on, transplanted into a new morph, assuming appropriate backup measures have been taken. Morphs are expendable, but your character\^aÄôs ego represents the ongoing, continuous life path of your character\^aÄôs mind, personality, memories, knowledge, and so forth. This continuity may be interrupted by an unexpected death (depending on how recent the backup was made), but it represents the totality of the character\^aÄôs mental state and experiences.
+
+
+ Some aspects of your character\^aÄîparticularly skills, along with some stats and traits\^aÄîbelong to your character\^aÄôs ego, and so stay with them throughout the character\^aÄôs development. Some stats and traits, however, are determined by morph, as noted, and so will change if your character leaves one body and takes on another. Morphs may also affect other skills and stats, as detailed in the morph description.
+
+
+ While these QSR provides ready-made characters for use and simplified rules within the adventure for resleeving between morphs, one of the most unique aspects of the full rules of \emph{Eclipse Phase}
+\^aÄîincluding its character creation system\^aÄîis the Ego vs. Morph. n
+
+
+\begin{tabular}{ccccccccc}
+
+
+ test difficulty
+ &
+
+ Difficulty Level
+
+
+ modifier
+ &
+
+ Effortless
+
+
+ +30
+ &
+
+ Simple
+
+
+ +20
+ &
+
+ Easy
+
+
+ +10
+ &
+
+ Average
+
+
+ +0
+ &
+
+ Difficult
+
+
+ \^aÄì10
+ &
+
+ Challenging
+
+
+ \^aÄì20
+ &
+
+ Hard
+
+
+ \^aÄì30
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{ccccc}
+
+
+ \textbf{\^A†modifier severity}
+
+ &
+
+ \textbf{severity}
+
+
+
+ \textbf{modifier}
+
+ &
+
+ Minor
+
+
+ +/\^aÄì 10
+ &
+
+ Moderate
+
+
+ +/\^aÄì 20
+ &
+
+ Major
+
+
+ +/\^aÄì 30
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{cccccccccccc}
+
+
+ \textbf{subversion 
+ difficulties}
+
+ &
+
+ \textbf{modifier}
+
+
+
+ \textbf{Task}
+
+ &
+
+ +30
+
+
+ See basic network status
+ &
+
+ +20
+
+
+ List logged-in users, running applications
+ &
+
+ +10
+
+
+ View data traffic\^A†
+ &
+
+ \^aÄì00
+
+
+ Execute commands\^A†
+ &
+
+ \^aÄì10
+
+
+ Change settings\^A†
+ &
+
+ \^aÄì20
+
+
+ Scramble network\^A†
+ &
+
+ \^aÄì30
+
+
+ Shut down network\^A†
+ &
+
+ \^aÄì40
+
+
+ Subvert network in minor ways, boot out muse
+ &
+
+ \^aÄì50
+
+
+ Subvert network in major ways, boot out shutter \^A†
+ &
+
+ \^aÄì60
+
+
+ Totally subvert network/zombify/turn it against its users
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{ccccccccc}
+
+
+ \textbf{reputation networks}
+
+ &
+
+ \textbf{network}
+
+
+
+ \textbf{description}
+
+ &
+
+ The @-list
+
+
+ The Circle-A list for anarchists, argonauts and scum, noted as @-Rep.\^A†
+ &
+
+ CivicNet
+
+
+ Used by the Planetary Consortium and hypercorps, referred to as c-Rep.\^A†
+ &
+
+ EcoWave
+
+
+ Used by preservationists and reclaimers, referred to as e-Rep.
+ &
+
+ Fame
+
+
+ The see-and-be-seen network used by socialites, artists, glitterati, and media, referred to as f-Rep.\^A†
+ &
+
+ Guanxi
+
+
+ Used by the Triads and numerous criminal entities, referred to as g-Rep.\^A†
+ &
+
+ The Eye
+
+
+ Used by Firewall, noted as i-Rep.\^A†
+ &
+
+ RNA
+
+
+ Research Network Affiliation, used by technologists, scientists and researchers, referred to as r-Rep.
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{ccccccc}
+
+
+ \textbf{acquire services}
+
+ &
+
+ \textbf{Modifier}
+
+
+
+ \textbf{Service}
+
+ &
+
+ +20
+
+
+ \textbf{Simple Favor:}
+ Perform services for 15 minutes. Move a chair. Browbeat someone. Give someone a ride. Research someone onlin\~A{\S}e. Lend 50 credits. Other Trivial cost services.
+ &
+
+ +0
+
+
+ \textbf{Average Favor:}
+ Perform services for an hour. Help someone move to a new cubicle. Rough someone up. Lend a vehicle. Provide an alibi. Healing vat rental. Minor hacking assistance. Basic legal or police assistance. Lend 250 credits. Other Low cost services.
+ &
+
+ -10
+
+
+ \textbf{Difficult Favor:}
+ Perform services for a day. Help someone move to a habitat in the same cluster. Serious beatings. Lookouts. Short-distance egocast. Short shuttle trip (under 50,000 km). Minor psychosurgery. Uploading. Reservations at the best restaurant ever. Major legal representation or police favors. Lend 1,000 credits. Other Moderate cost services.
+ &
+
+ -20
+
+
+ \textbf{Challenging Favor:}
+ Perform services for a month. Move a body. Homicide. Pilot a getaway shuttle. Industrial sabotage. Large-volume shipping contract on bulk freighter. Medium-distance egocast. Mid-range shuttle trip (50,000\^aÄì150,000 km). Moderate psychosurgery. Resleeving. Get out of jail free. Lend 5,000 credits. Other High cost services.
+ &
+
+ -30
+
+
+ \textbf{Hard Favor:}
+ Perform services for a year. Move a dismembered body. Mass murder. Major embezzlement. Acts of terrorism. Relocate a mid-size asteroid. Long-distance egocast. Long-range shuttle trip (150,000 km or more). Lend 20,000 credits. Other Expensive cost services.
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{ccccccc}
+
+
+ \textbf{acquire information}
+
+ &
+
+ \textbf{Modifier}
+
+
+
+ \textbf{Service}
+
+ &
+
+ -20
+
+
+ \textbf{Common Information:}
+ Where to eat. What biz a certain hypercorp is in. Who\^aÄôs in charge.
+ &
+
+ +0
+
+
+ \textbf{Public Information:}
+ Make gray market connections. Where the \^aÄúbad neighborhood\^aÄù is. Obscure public database info. Who\^aÄôs the local crime syndicate. Public hypercorp news.
+ &
+
+ -10
+
+
+ \textbf{Private Information:}
+ Make black market connections. Where an unlisted hypercorp facility is. Who\^aÄôs a cop. Who\^aÄôs a crime syndicate member. Where someone hangs out. Internal hypercorp news. Who\^aÄôs sleeping with whom.
+ &
+
+ -20
+
+
+ \textbf{Secret Information:}
+ Make exotic black market connections. Where a secret corp facility is. Where someone\^aÄôs hiding out. Secret hypercorp projects. Who\^aÄôs cheating on whom.
+ &
+
+ -30
+
+
+ \textbf{Top Secret Intel: }
+Where a top secret black-budget lab is. Illegal hypercorp projects. Scandalous data. Blackmail material.
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+\begin{tabular}{ccccccccccccccccccccccccccccccccccccccc}
+
+
+ 
+
+ &
+
+ \textbf{general}
+
+
+
+ \textbf{modifier}
+
+ &
+
+ Character using off-hand
+
+
+ \^aÄì20\^A†
+ &
+
+ Character wounded\^A†
+
+
+ \^aÄì10 per wound
+ &
+
+ Character has superior position
+
+
+ +20
+ &
+
+ Touch-only attack
+
+
+ +20
+ &
+
+ Called shot
+
+
+ \^aÄì30
+ &
+
+ Small target (child-sized)
+
+
+ \^aÄì10
+ &
+
+ Very small target (mouse or insect-sized)
+
+
+ \^aÄì30
+ &
+
+ Large target (car-sized)\^A†
+
+
+ +10
+ &
+
+ Very large target 
+ (side of a barn)
+
+
+ +30
+ &
+
+ Visibility impaired 
+ (minor: light smoke, dim light)
+
+
+ \^aÄì10
+ &
+
+ Visibility impaired 
+ (major: heavy smoke, dark)
+
+
+ \^aÄì20
+ &
+
+ Blind attack
+
+
+ \^aÄì30
+ &
+
+ 
+
+
+
+ 
+
+ &
+
+ \textbf{Melee Combat (Attacker)}
+
+
+
+ \textbf{Modifier}
+
+ &
+
+ Attacker charging
+
+
+ +20
+ &
+
+ 
+
+
+
+ 
+
+ &
+
+ \textbf{Melee Combat (Defender)}
+
+
+
+ \textbf{Modifier}
+
+ &
+
+ Receiving a charge
+
+
+ +20
+ &
+
+ 
+
+
+
+ 
+
+ &
+
+ \textbf{Ranged Combat (Attacker)}
+
+
+
+ \textbf{Modifier}
+
+ &
+
+ Attacker behind cover
+
+
+ \^aÄì10
+ &
+
+ Attacker running
+
+
+ \^aÄì20
+ &
+
+ Attacker in melee combat
+
+
+ \^aÄì30
+ &
+
+ Defender has minor cover
+
+
+ \^aÄì10
+ &
+
+ Defender has moderate cover
+
+
+ \^aÄì20
+ &
+
+ Defender has major cover
+
+
+ \^aÄì30
+ &
+
+ Defender prone and far 
+ (10+ meters)
+
+
+ \^aÄì10
+ &
+
+ Defender hidden\^A†
+
+
+ \^aÄì60
+ &
+
+ Aimed shot (quick)
+
+
+ +10
+ &
+
+ Aimed shot (complex)
+
+
+ +30
+ &
+
+ Multiple targets in same 
+ Action Phase\^A† \^A†
+
+
+ \^aÄì20 per 
+ additional target\^A†
+ &
+
+ Indirect Fire
+
+
+ \^aÄì30
+ &
+
+ Point-blank range (2 meters or less)\^A†
+
+
+ +10
+ &
+
+ Short range
+
+
+ \^aÄî
+ &
+
+ Medium range
+
+
+ \^aÄì10
+ &
+
+ Long range
+
+
+ \^aÄì20
+ &
+
+ Extreme range
+
+
+ \^aÄì30
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ \textbf{combat modifiers}
+
+
+
+\begin{tabular}{c}
+
+
+ EXAMPLE
+
+
+ \^A†
+
+
+ EXAMPLE
+
+
+\end{tabular}
+
+
+
+ 
+
+
+
+ While scavenging through the wreckage of a fallen colony on Mars, Adam\^aÄôs character is attacked. Adam and the gamemaster roll Initiative and begin to resolve combat.
+
+
+ Adam\^aÄôs character has the highest Initiative and so goes first. Since he\^aÄôs feeling a little exposed in his current position and doesn\^aÄôt know the location of all the attackers, he spends a Complex Action and goes on full defense.
+
+
+ Next, the first opponent NPC attacks Adam\^aÄôs character. First Adam adds up his numbers. Because it\^aÄôs a ranged attack, he uses half his Fray skill, rounding down, which gives him a 22.\^A† Because he spent a Complex Action to go on full defense, he can add a +30 modifier, giving him a 52. He then determines if any Combat Modifiers apply for his character. He looks at the General Modifiers section of the Combat Modifiers Table and asks the gamemaster if he\^aÄôs got a superior position to the guy attacking. The gamemaster decides that\^aÄôs the case and allows Adam to add a +20 modifier, giving him a final modified target number of 72.\^A†
+
+
+ Next the gamemaster adds up the numbers for the NPC. He\^aÄôs firing a kinetic weapon, and so uses his Kinetic Weapon skill of 52. There\^aÄôs dim light on the battlefield, which applies a \^aÄì10 modifier. The attacker is also behind cover, which applies another \^aÄì10 modifier. Finally, the range is long, applying a \^aÄì20 modifier, resulting in a final target number of 12.
+
+
+ Adam and the gamemaster roll d100. The gamemaster rolls a 32, while Adam rolls a 33. Not only did Adam succeed and the NPC miss, but Adam rolled a critical success. The gamemaster decides that means the gun jams and then backfires, exploding in the NPC\^aÄôs face. The gamemaster has the man stand up in shock, screaming, holding his face.
+
+
+ In the next Action Turn, Adam once again goes first. This time he knows exactly where at least one of the attackers is and decides to take the shot with his laser pulser. He looks on his character sheet and notes that the pulser only has an \^aÄúSA\^aÄù (semi-automatic) rate of fire, and so he decides to make two shots as part of the same Complex Action. He quickly runs his numbers: 59 for his Beam Weapon skill and \^aÄì10 for medium range; not only does he have implants that ignore the dim lighting condition, but his pulser gun has a longer range than the kinetic rifle that was fired at him. He\^aÄôs got a final target number of 49.
+
+
+ The gamemaster adds up the NPC\^aÄôs numbers. He starts with a 27 (half the character\^aÄôs Fray skill), and then decides to add \^aÄì10 since the character is not paying as much attention to the situation as he should, resulting in a final target number of 17.
+
+
+ Adam and the gamemaster roll d100. The gamemaster rolls a 78, while Adam rolls a 65. The NPC failed, but so did Adam (even if Adam spent a point of Moxie to flip the roll from 65 to 56, he still failed), and so the shot missed. It\^aÄôs the same 49 for the second shot. However, despite the speed of the situation, the gamemaster decides to remove the \^aÄì10 for distraction as a missed laser shot near the NPC has brought the man back to his senses, leaving him with a final target number of 27.
+
+
+ Again, Adam and the gamemaster roll d100. The gamemaster rolls a 43, while Adam rolls a 33! Not only a hit, but a critical hit! Now the gamemaster looks at his notes and sees that the NPC is wearing armored clothing. Normally that would provide an Armor Value of 2 for an energy weapon attack, and Adam\^aÄôs pulser gun doesn\^aÄôt have an Armor Penetration rating. However, Adam\^aÄôs critical success roll allows him to bypass the opponent\^aÄôs armor.
+
+
+ Adam now determines the Damage Value. Checking his sheet again, he notes the Damage Value of the pulse laser gun is 2d10. He rolls for a result of 6 and 7, which gives him a final Damage Value of 13.
+
+
+ The gamemaster notes that value down; the NPC\^aÄôs Durability is 31, and the gamemaster already gave him 5 points of damage for the backfired weapon. Only 15 more points and the NPC will fall unconscious. However, the gamemaster notes that the NPC\^aÄôs Wound Threshold is 6. With a Damage Value of 13, that means the NPC sustained 2 wounds! The gamemaster notes that he\^aÄôll need to apply a \^aÄì20 modifier to any future actions made by the NPC, and he also must make an immediate Knockdown and Unconsciousness Test.\^A†
+
+
+ Adam lets the gamemaster know the rule: don\^aÄôt mess with Adam!
+
+
+ Welcome to Firewall
+
+
+ [Incoming Message Received. Source: Unknown]
+
+
+ [Quantum Analysis: No Interception Detected]
+
+
+ [Decryption Complete]
+
+
+ Greetings,
+
+
+ Your references and background have been triple-checked and confirmed, and you are now vetted as a sentinel operative. Welcome to Firewall, friend.
+
+
+ For those new to our private network, Firewall is an organization dedicated to protecting transhumanity from threats\^aÄîboth internal and external\^aÄîto our continued existence as a species. The Fall may have reminded us that our ability to survive and prosper is not guaranteed, but our kind has a remarkably short attention span. Despite our achievement of functional near-immortality, we continue to face numerous dangers that may contribute to our extinction. Some of these risks come from our own factionalism and divisiveness, combined with universally available technology that could cause widespread destruction and untold deaths in the wrong hands. Some stem from our short-sightedness, failing to see the dangers in which we place ourselves and our environments through careless actions. Some arise from our own creations turned against us, as the TITANs proved. Other risks may come from alien intelligences whose motivations we cannot yet fathom, and of whom we may not even be aware. Still others may threaten us by sheer chance and the mindless but deadly cause-and-effect of a universe in which we are but an insignificant speck.
+
+
+ Firewall exists to identify, analyze, and counter these risks. We are all volunteers. We are all placing our own lives at risk in order to ensure the survival of transhumanity.
+
+
+ Firewall has existed, under other names and guises, since before the Fall. Numerous agencies with a similar agenda banded together in the wake of those cataclysmic events to assess our situation and prepare for the worst. Now we operate under a single umbrella.
+
+
+ We are a private network for two reasons. First, our existence and operational abilities are protected by our secrecy. The less our opposition knows about us, the more effectively we can counter them. Similarly, certain authorities might be hostile to an organization such as ours operating in their claimed territory. Though some may be aware of our existence, we bypass numerous legal and jurisdictional hurdles that might otherwise hamper our actions and goals. Second, our mission sometimes brings to light information that is not only dangerous in the wrong hands, but might even trigger widespread panic if made public. In some cases, the very existence of such knowledge could be problematic. By retaining secrecy and operating on a need-to-know basis, we automatically counter certain risks.
+
+
+ Firewall is a decentralized, peer-to-peer network. We have minimal hierarchy and we answer to no one but ourselves. Our node structure enables us to share resources and talents without sacrificing the privacy and security of our operatives.
+
+
+ You have been recruited because of your knowledge, assets or skills, and/or because you have come into contact with certain restricted data. You have proven your willingness to support our goals. Our lives and existence\^aÄîand the future of transhumanity\^aÄîmay rest in your hands.
+
+
+ So here\^aÄôs to the future\^aÄîmay we all live to see it.
+
+
+ [End Message] [This Message Has Self-Erased] \^A†
+
+
+ What You Really Need to Know
+
+
+ 
+
+
+
+ [Incoming Message Received. Source: Unknown]
+
+
+ [Quantum Analysis: No Interception Detected]
+
+
+ [Decryption Complete]
+
+
+ Sit down, and grab yourself a fucking drink.
+
+
+ Forget all of that AI-generated intro crap you just read. Here\^aÄôs the real deal.
+
+
+ You\^aÄôre probably dying to know what you\^aÄôve been dragged into. Maybe you\^aÄôve been told the party line already: that we\^aÄôre all that stands between transhumanity and extinction. Or maybe someone whispered to you that we\^aÄôre a rogue operation that meddles in heavy shit that we have no authority to get involved in, and that we sometimes get people killed as a result. You must be curious. Maybe you\^aÄôve got a vigilante streak, and you\^aÄôre looking to spill blood for a good cause. Would it matter to you if the cause was a deluded one? Maybe you\^aÄôre a conspiracy wingnut and you\^aÄôre dying to know what secrets Firewall is clutching to its collective chest. What if those secrets shattered the carefully constructed lies that we all tell to ourselves to keep our sanity intact?
+
+
+ Everything you\^aÄôve heard, good or bad, about Firewall very well may be true. We\^aÄôre not angels. We lost the sheen on our ideals when the TITANs forcibly uploaded their first human mind. Right now, you should be asking yourself what the fuck you just signed up for. I did.
+
+
+ Truth is, Firewall is lots of things. Most of it is good, but a lot of it so fucking horrible you\^aÄôll be thinking about planting a bullet in your stack and resorting to an earlier backup, just so you can forget it all. If you have any romantic visions about being a hero, though, drop them now. You won\^aÄôt feel like a hero when you airlock some kid because he\^aÄôs carrying an infectious nanovirus. You won\^aÄôt feel brave when you run across some alien \emph{thing}
+ and crap your pants. And you won\^aÄôt even feel human anymore when you make a call that will cost dozens, hundreds, or even thousands of people their lives, even if you are saving millions more.
+
+
+ So why would anyone be crazy enough to be part of this thing? Because it needs to be done. Our survival depends on it. To some people, it\^aÄôs altruism, defending transhumanity. But really, it\^aÄôs about saving your own fucking neck too. Sure, you could abstain from taking responsibility and let some self-described authority take care of it. But if the anarchists have anything right, it\^aÄôs that people in power can\^aÄôt be trusted. As often as not, they\^aÄôre part of the problem. So Firewall does things the collective way. We\^aÄôre underground, but we\^aÄôre an open source operation. We share information and resources towards a common goal. We organize in networked ad-hoc cells, smart-mob style. We don\^aÄôt let anyone accrue too much power or control. Everyone involved in an op has an equal say. We police ourselves. We come from all sorts of backgrounds and factions, but we face a common enemy\^aÄîand we fight to win. There is no alternative.
+
+
+ Maybe you\^aÄôve heard of the Fermi Paradox? That question asked why, with a galaxy so huge, there were so few signs of other life? Even though we\^aÄôve met the Factors and seen evidence of other aliens, our galactic neighborhood should be crawling with intelligence\^aÄîbut it\^aÄôs not.
+
+
+ I\^aÄôll tell you why. The universe is not fucking fair. If transhumanity were wiped out, the galaxy wouldn\^aÄôt even notice. Just look at the Earth. That planet still exists, still supports life, even though we\^aÄôre far gone. Reality is an uncaring asshole. Forget all that utopian crap about living forever. We\^aÄôll be lucky to survive another year. We\^aÄôve developed technologies that put weapons of mass destruction in the hands of everyone, but we\^aÄôre still an adolescent species that has trouble overcoming petty tribal bullshit. If you\^aÄôre really looking forward to exploring the universe as a postmortal, you\^aÄôre going to have to work hard at it. Survival isn\^aÄôt a right, it\^aÄôs a privilege.
+
+
+ When you sign up with Firewall, you put yourself on call. Anytime some shit goes down in your neck of the woods or that you might be particularly helpful in dealing with, you\^aÄôll get a call. You\^aÄôll be expected to drop whatever you\^aÄôre doing and put everything else on hold as if your life depended on it\^aÄîit probably does. When you\^aÄôre in the field, on an op\^aÄî\^aÄùgoing to the doctor,\^aÄù as we call it\^aÄîyour cell is empowered to act as it sees fit \^aÄ$|$ just keep in mind that you\^aÄôll be answering to the rest of us later. You\^aÄôll also have the Firewall network to back you up\^aÄîthough resources are often limited, so don\^aÄôt expect us to always save your ass. Other sentinels can be called on to pull strings, but every time we do so, it threatens to unveil an agent, create a trail that we need to clean up, and otherwise complicates matters. Self-reliance is key.
+
+
+ One last thing: don\^aÄôt ever, ever forget that we have enemies. I\^aÄôm not just talking about the nutjob who wants to nuke a habitat to make a political statement or the neo-luddites who think biowar plagues will teach us all a lesson, I\^aÄôm talking about the agencies that know Firewall exists and consider it a threat. If they tag you as a sentinel, your days are numbered. Maybe your backups too. So watch yer friggin\^aÄô back.
+
+
+ So that\^aÄôs the real deal, as honest as I can give it. Welcome to our secret clubhouse, comrade. Remember: death is just another day on the job.
+
+
+ [End Message]
+
+
+ [This Message Has Self-Erased] 
+
+
+ MISSION: MIND THE WMD
+
+
+ nMISSION: MIND THE WMDnMISSION: MIND THE WMDnMISSION: MIND THE WMDnnMISSION: MIND THE WMDn
+
+
+ 3
+
+
+ Synopsis
+
+
+ \emph{Mind The WMD}
+ is a mission for starting players and gamemasters. It is designed to be played with 1 gamemaster and 4 players. It can be played using these \emph{Eclipse Phase Quick Start Rules,}
+ or it can be used with the \emph{Eclipse Phase}
+ core rules with minimal modifications. Four pre-generated characters are provided (p. 30\^aÄì33), one for each player. Only the gamemaster should read any further, so as not to spoil the plot for the players.
+
+
+ This scenario begins with the four player characters aboard the Scum barge \emph{Ecstatic Metamorphosis.}
+ They are contacted by Firewall and assembled as a team for an operation on the barge. Their job is to investigate rumors that a black market weapons dealer is offering some sort of devastating weapons technology for sale. If the goods are deemed to pose an existential risk, they are to be acquired or destroyed by any means necessary.
+
+
+ The sentinels eventually track down the arms dealer and arrange a meeting, posing as buyers. The meet takes place on the dealer\^aÄôs ship, which is docked with the Scum barge. As soon as the characters ascertain the nature of the weaponry, however, the meeting is attacked by a third party seeking to steal the technology. In the heat of combat, the weapon system is activated, releasing a highly dangerous, hostile, self-replicating nanoswarm. In order to prevent the whole barge from becoming infected, the characters must detach the dealer\^aÄôs ship from the barge. Shortly afterwards it is destroyed\^aÄîmost likely with the characters still aboard.
+
+
+ Part two of the scenario sees the characters being re-sleeved on Mars\^aÄîeither restored from their backups or farcast from the Scum swarm. After investigating the arms dealer and tracking their past activity, Firewall believes they may know where the nanoswarm came from. The characters are sent into the Martian wasteland to investigate the ruins of a dome habitat destroyed during the Fall. When they arrive, they discover a cache of weapons created and left behind by the TITANs.\^A†
+
+
+ Unfortunately for the characters, the group that attacked their meeting with the arms dealer has successfully tracked them to the cache. The characters must fend off their opponents without letting the devastating weapons fall into their hands.
+
+
+ 
+
+
+
+ Scene 1: Swimming in Scum
+
+
+ At the start of the mission, each of the characters is independently aboard the \emph{Ecstatic Metamorphosis,}
+ a former colony ship retrofitted as a nomadic city by the Scum faction (\emph{see The Scum Barge, p. $<$OV$>$}
+). Each character is an established Firewall operative, but they do not know each other and have never worked together before. \^A†
+
+
+ 
+
+
+
+ Assigning the Mission
+
+
+ While going about their personal business, each character simultaneously receives an encrypted message via the Mesh. This missive originates from Firewall\^aÄôs social network, with all the appropriate code words. It reads as follows:
+
+
+ 
+
+
+
+ Ni hao, friend. Your urgent assistance is needed. It has come to our attention that an unknown art dealer in your vicinity is seeking to sell certain masterpieces to the highest bidder. Please investigate and ascertain the nature of the artwork and its potential impact on the public. If it is truly of masterpiece quality, do whatever it takes to keep this artwork from falling into a private collection. You have three collaborators in your vicinity to help with your assessment. Keep us apprised of your progress.
+
+
+ 
+
+
+
+ This message comes with information that allows each character to contact and track the other player characters via the Mesh.
+
+
+ 
+
+
+
+ Meeting Up
+
+
+ The first order of business will likely be for the characters to meet up, or at least to establish contact online. Let the players handle this however they wish, but encourage roleplaying. This is a good opportunity for the players to start to define their characters, so allow them to describe their personal looks to the others in detail and otherwise pinpoint what characteristics stand out.
+
+
+ 
+
+
+
+ \textbf{The Scum Barge}
+
+
+
+ The characters are traveling on a massive ship that is literally carrying thousands of people, like a floating city in space. The ship\^aÄôs central cylinder is rotated for light gravity (0.4 G), but the rest of the ship is without gravity. The ship\^aÄôs primary operators are adherents to the so-called Scum faction, lifestyle anarchists who endorse full personal control over one\^aÄôs own body and mind and who embrace body modification and experimentation. Scum barges are nomadic festivals where almost anything goes, a mobile black market. There are no police and few restrictions as long as you do not endanger the ship. The barge itself does not travel alone; a swarm of smaller craft surrounds and accompanies it.
+
+
+ This is a good opportunity for the characters to wander around and interact with others, and for the gamemaster to provide a description of transhumanity at its most eclectic. Scum barges are crossroads for people of all factions, morphs and ideologies, each coming here to pursue business without restrictions, to vacation and party, or to simply catch a lift to the next destination. Parts of the ship are open bazaars, others are non-stop nightlife, and there are even some areas where you can seek out some rest or privacy.
+
+
+ 
+
+
+
+ Tracking Down the Dealer
+
+
+ In order to track down the dealer, the characters must engage in a bit of legwork. They have two options for turning up the information they need: face-to-face, or by using rep.
+
+
+ 
+
+
+
+ \textbf{Face-to-Face Bribes/Threats}
+
+
+
+ Option one is for the characters to simply start asking around. This can go well or poorly, depending on whom they approach and how they deal with them. The gamemaster must determine how well this tactic works, depending on how the\^A† characters go about it. For example, if the characters use their knowledge and perceptive skills to find someone who seems to be of the criminal persuasion and discreetly offer that person a bribe for the information they need, they\^aÄôre off to a good start. If they just pick someone at random and start making threats, not so much.
+
+
+ Ultimately, this method relies on successful use of skills such as Persuasion, Protocol or Intimidation, perhaps bolstered by credits or realistic threats. It is also a good way for the characters to meet some NPCs.
+
+
+ 
+
+
+
+ \textbf{Using Rep}
+
+
+
+ Option two is for the characters to rely on their social networks and reputation. This type of negotiation is typically handled via the Mesh, as the character queries their buddy lists and friends-of-friends, relying on their reputation score to induce someone\^aÄôs help. This requires a test using an appropriate rep score\^aÄîin this case, either g-Rep or @-Rep.
+
+
+ 
+
+
+
+ \textbf{The Details}
+
+
+
+ Each successful roll should get the player characters a little closer to the information they need. First they should find out that there is indeed an arms dealer on the ship who is taking bids on some sort of impressive weapons technology. The details on the actual weaponry remain sketchy, but the characters should discover that the dealer is known as Gray Xu, a broker loosely affiliated with the Night Cartel. Further research will indicate that several parties have expressed interest in the goods, but no one is saying who.
+
+
+ 
+
+
+
+ \textbf{Arranging a Buy}
+
+
+
+ If the characters dig a little more, they will be able to arrange their own meeting with Gray Xu, which is the easiest way for them to analyze the threat level posed by what she\^aÄôs selling. The meeting is slated to take place aboard Gray Xu\^aÄôs private spacecraft, which is currently docked with the Scum barge.
+
+
+ 
+
+
+
+ Tweaks
+
+
+ If the characters are having a hard time tracking down the dealer, give them a break by having one of the dealer\^aÄôs contacts approach the character with the highest g-rep. She \emph{is}
+ looking for buyers, after all.
+
+
+ If the gamemaster wants to spruce up this scene, make digging up the dirt a bit harder. Perhaps Gray Xu already has a potential buyer lined up, and neither party is excited about having someone nosing around in their business. In this case, the characters might get an unfriendly visit from some of Xu\^aÄôs enforcers (if they come out on top, this could give them the break they need).
+
+
+ 
+
+
+
+ Scene 2: Deals Gone Bad
+
+
+ Now that the characters have located their quarry, the real action begins. This scene explodes with danger quickly\^aÄîand ends with a bang.
+
+
+ 
+
+
+
+ The Meet
+
+
+ Gray Xu\^aÄôs ship is much smaller than the Scum barge, but still sizable. A refitted ore freighter, it features more than a dozen separate compartments in addition to its ample-size storage bay. The ship is tethered to one of the barge\^aÄôs aft docking stations, meaning that the ship and the barge in this area have zero gravity. Characters who want to move around normally in zero-G should have no problem, but anyone that wants to try something tricky or fancy will have to make a Freefall Test.
+
+
+ 
+
+
+
+ \textbf{The Dealer\^aÄôs Security}
+
+
+
+ Gray Xu is relying on four well-armed enforcers to provide ample protection. Two slitheroids (snake-like robotic morphs) guard the airlock, greeting the characters with a thorough scan and search when they arrive, and confiscating any non-implanted weaponry. Two neo-hominids (uplifted gorillas) then escort the characters into the ship, down to the hold where Gray Xu waits. These neo-hominids are graceful in zero-G, but they are incomplete uplifts incapable of human speech.\^A†
+
+
+ 
+
+
+
+ \textbf{The Weapons}
+
+
+
+ A large space has been cleared out of the hold, where Gray Xu waits to negotiate. She floats easily in her bouncer morph, well suited to zero-G. Her skin is deep gray, with a shock of white hair and white eyes. Between her prehensile feet she holds an unremarkable metal canister.
+
+
+ Gray Xu will greet the characters with the courtesy due to any prospective customers. She will not waste time diving into her sales pitch, however, instead providing entoptic information displays on her goods.
+
+
+ She claims that the item for sale is a relic of the TITANs, the AIs blamed for the Fall, recovered from some hidden weapons cache. In her analysis, the canister contains a dangerous and intelligent autonomous nanoswarm, similar to those unleashed on Earth and Mars during the Fall. This swarm sends out a horde of invisible nanites with adaptive and self-replicating capabilities\^aÄîtechnology that is years beyond current transhuman tech levels. Such swarms are capable of converting matter from the molecular level into almost anything needed for them to overcome whatever lies in their path.
+
+
+ 
+
+
+
+ \textbf{What Would Firewall Do?}
+
+
+
+ The characters will instantly recognize this technology as exceptionally dangerous\^aÄîsuch nanoswarms enveloped and destroyed entire cities during the Fall. Technology of this sort most definitely falls under the umbrella of Things to Capture or Destroy at All Costs.\^A†
+
+
+ 
+
+
+
+ Uninvited Guests
+
+
+ As the characters are undoubtedly silently debating (via their mesh implants) how to buy, steal and/or destroy the canister, the unexpected happens\^aÄîXu\^aÄôs ship comes under attack. Their negotiations are suddenly interrupted by the sounds of combat as an unknown third party storms onto Xu\^aÄôs ship, making short work of the slitheroid guards. The characters find themselves in a tense situation, as Xu\^aÄôs neo-hominid bodyguards move to protect her while keeping the characters carefully covered\^aÄîfor all they know, the characters are responsible for this sudden raid.
+
+
+ The characters will have less than half a minute to somehow put Xu\^aÄôs fears to rest, a challenging task no matter how persuasive they are (\^aÄì30 to Persuasion Tests). Alternatively, they can make a move of their own; though they outnumber Xu and her gorillas, they are heavily outgunned. The gamemaster should attempt to run this scene in real-time using roleplaying, keeping a sharp eye on how much time passes.
+
+
+ Around 30 seconds after the first sign of trouble, the attackers reach the door to the cargo hold. The characters will find themselves unarmed and in a crossfire\^aÄîin zero-G to boot. Luckily, Xu\^aÄôs side and the attackers will concentrate on each other, only going after the characters if they pose a threat or otherwise draw attention to themselves. Give the characters a chance to take cover behind other cargo, or even to escape the hold via another exit.
+
+
+ 
+
+
+
+ \textbf{Worst-Case Scenario}
+
+
+
+ Just when the situation is looking bad, it gets catastrophic. Either the canister is hit by a stray shot, or Xu accidentally or intentionally triggers it. Either way, there is a loud bang, distinctly different from the other sounds of combat, and suddenly a large cloud of scintillating silver mist envelopes the area around Gray Xu\^aÄîthe nanoswarm has been released. A temporary lull in combat ensues as both sides stare in shock. For a long moment the fog will seem to linger, slowly expanding, until parts of it suddenly come to life, moving in ways unnatural for mist to move and even seeming to coalesce into strange shapes. Gray Xu screams, propelling herself further back into the hold, a trail of silver cloud latched on to her.
+
+
+ As the gorillas and attackers begin shooting once again, take a moment to make sure the characters understand the direness of the situation. The nanoswarm, now loose, is nearly unstoppable. It is spreading rapidly, and poses a great danger to everyone on the ship. In fact, if the swarm is not somehow contained on the ship, it could threaten the entire barge. And it\^aÄôs coming their way. All characters viewing the nanoswarm must make a WIL x 3 Test or suffer 1d10 \~A$\cdot$ 2 (round down) stress.
+
+
+ If any character comes into contact with the nanoswarm, they immediately suffer 1d10 damage (armor does not protect against it) as well as 1d10 stress as they realize they have been infected (derangements that result might include anxiety, nausea or fixation on the infected part of their body). At the end of each Action Turn after that, they will suffer additional damage, starting at 1d10 + 2, and increasing by +2 each additional round, until dead. Their last moments are likely to be horrifying and painful.
+
+
+ 
+
+
+
+ Saving the Barge
+
+
+ As members of Firewall, the characters\^aÄô duty is to contain this threat and protect the barge. To this end, they need to seal the ship, though that is only a temporary measure. A far safer one would be to cast it free from the barge entirely.
+
+
+ There are several ways the characters can go about the first part. One is to get past the attackers\^aÄîeither by taking a separate exit from the hold and sneaking past any others roaming the ship, or by overcoming them\^aÄîand manually seal the airlock. Another is to hack the ship\^aÄôs network and instruct it to seal the airlock.
+
+
+ Moving the ship away from the barge is more difficult. Even if a character manages to make it to the ship\^aÄôs bridge, the ship\^aÄôs onboard AI will not allow an unauthorized person to pilot the ship. The characters\^aÄô only choice is to hack the controls\^aÄîor somehow force Gray Xu to make the order. Hacking the ship requires a Network Intrusion Test at \^aÄì30 to infiltrate the system, and then a Subversion Test, with a modifier based upon the type of commands the players wish to send (as determined by the gamemaster).\^A†
+
+
+ If any of these attempts fail, Gray Xu might order the ship to seal itself off, decouple and move away from the barge, either as a last act of altruism or simply to isolate her attackers.\^A†
+
+
+ 
+
+
+
+ Friendly Fire
+
+
+ At some point, the characters are likely to report their situation back to Firewall. If they don\^aÄôt, the situation will continue, with the nanoswarm slowly spreading throughout the ship, killing and/or transforming everyone and everything in its path. The swarm is intelligent, capable of evaluating any threats and of combining nanites together to form larger-scale objects, such as grasping tentacles or shredding tools to cut through barriers\^aÄîalmost anything imaginable. It is also effectively immune to most attacks. If the characters are quick, they might be able to reach an airlock, grab a spacesuit and jump free into space. Any character abandoning ship must make a WIL x 3 Test or suffer 1d10 \~A$\cdot$ 2 (round down) stress as they leap into space, risking death (resulting derangements might include vertigo, fear of the dark or fear of open spaces).
+
+
+ If the characters fail to contact Firewall, at some point Firewall will contact them to check on their situation\^aÄîespecially if Xu\^aÄôs ship has suddenly and inexplicably cast itself free against all safety warnings and gone drifting into space.
+
+
+ Once Firewall becomes aware that a nanoswarm threat is loose inside the ship, it will immediately implement an emergency plan to eliminate the danger. Unfortunately for the characters, this means that another Firewall agent placed on board another ship in the swarm will target Xu\^aÄôs ship with a missile. If Firewall is feeling nice, it may give the characters 20 or 30 seconds\^aÄô warning to get to an airlock. Otherwise, the only warning the characters may have is from the ship\^aÄôs AI, as it broadcasts an alert of an incoming missile impact. Despite the AI\^aÄôs attempt to maneuver away, the missile will strike and obliterate the ship.
+
+
+ 
+
+
+
+ Scene 3: Get Your Ass to Mars
+
+
+ Whether they survived or died, the characters\^aÄô mission is not yet complete. Firewall has traced Gray Xu\^aÄôs previous activities and believes they may know where she acquired the TITAN nanoswarm, and so the characters are sent to Elysium on Mars.
+
+
+ 
+
+
+
+ Resleeving
+
+
+ Any character that died in the previous part of the mission is resurrected on Mars. If their cortical stack was retrieved (i.e., their body was not lost or totally destroyed), they are downloaded from that. In this case, however, they remember their moment of death. Such characters suffer 1d10 + 3 stress (resulting derangements likely include phobias or detachment, or somehow relate to the manner of death). Characters who were killed (or already dead) when the missile struck the barge have a slight chance of having their cortical stack recovered from the wreckage; they must roll less than 20 on d100, or permanently burn 1 point of Moxie.\^A†
+
+
+ If their cortical stack was not retrieved, they must be restored from a previous archived backup. In this case, they undergo a slight loss of continuity (part of their life is missing), and so suffer 1d10 \~A$\cdot$ 2 (round down) stress. The character will not remember the previous part of the mission or their death, and so Firewall will have to bring them up to speed on what happened.
+
+
+ Characters who survived the previous part of the mission fare better, but they must still have their ego uploaded and transmitted to Mars, where they are downloaded and re-sleeved in a new morph.
+
+
+ All of the characters wake up in a new body, provided for free courtesy of Firewall, in a re-sleeving facility in Elysium. While they recuperate from the procedure, Firewall updates them. Getting used to a new morph is not easy, however. Each character must make a WIL x 3 Test, suffering 2 points of stress if they succeed and 4 if they fail (possible derangements typically include body dysmorphia). Likewise, each character suffers a \^aÄì20 modifier to all physical actions as they get accustomed to their new body. Reduce this modifier by 5 for every 12 hours that passes.
+
+
+ 
+
+
+
+ Welcome to Mars
+
+
+ The characters will find themselves in Elysium, one of the largest cities on Mars, and a center of entertainment, fashion and hypercorp culture. It is situated within a large chasm, covered by multiple domes. Its shiny structures, glittering holograms, omnipresent entoptics, buzzing air traffic and non-stop nightlife should stand in sharp contrast to the dingy corridors of the Scum barge. Gravity is a light 0.38 G.
+
+
+ Give the characters a small chance to enjoy the high life and explore their environs, basking in the presence of the hypercorp glitterati and socialites. Beauty and style are so common here as to be mundane, those who want to be seen wear exotic sylph morphs or decorate/modify themselves in extravagant ways. Firewall needs the characters to move fast, but they\^aÄôll tolerate a few hours of sightseeing. Though Firewall also equips the characters well, they may wish to acquire some gear of their own on the side, calling for a few Reputation, Protocol or Persuasion Tests. Keep in mind that characters sleeved in synthetic morphs may have a difficult time blending in here, as shells are viewed as lower class and distasteful (\^aÄì20 modifier to appropriate social tests).
+
+
+ 
+
+
+
+ Expedition
+
+
+ The characters\^aÄô mission is to leave Elysium and travel more than a thousand kilometers to a former habitat known as Ebb 6, which was destroyed during the Fall. According to the records, the dome surrounding the small settlement was breached during an attack by AI killbots. Hundreds succumbed to the depressurization and change of atmosphere, with more dying when the machines overran the base. With little need to reclaim the settlement, it remains a desolate ruin. It lies in an area considered dangerous, still roamed by surviving constructs left behind by the TITANs.
+
+
+ The characters are given a buggy to drive out to the ruins, as a direct flight would likely attract too much attention. Characters in ruster or synthetic morphs can easily get by in the partly terraformed Martian atmosphere, but other biomorphs will be forced to wear rebreathers as well as heated clothing. Firewall also equips the characters with a portable nanofabrication device, which enables the characters to create almost any gear they need, constructed from the molecular level on up, given enough time.
+
+
+ 
+
+
+
+ \textbf{Nanofabrication}
+
+
+
+ A character that wishes to construct something in the nanofabricator must make a successful Programming Test. This is a Task Action, with a timeframe of 10 minutes. Once the nanofabricator is programmed, it runs on its own. The amount of time it takes to manufacture an item depends on the complexity: 1 hour for simple tools (hammer, crowbar, tent, etc.), 6 hours for moderately difficult gear (night-vision gear, rebreather, etc.), and 1 day for highly complex objects (firearms, computers, etc.). The gamemaster should apply difficulty modifiers as appropriate to the item in question. At the gamemaster\^aÄôs discretion, the fabricator may not create some items that are too complex or too dangerous.
+
+
+ 
+
+
+
+ Martian Dangers
+
+
+ Traveling to the destroyed dome will take approximately 12 hours, though the characters can drag this out longer if they choose. They may encounter numerous difficulties along the way, though it is up to the gamemaster which to include depending on the pacing of the game:
+
+
+ \textbf{Terrain.}
+ The characters\^aÄô buggy may run across crevasses, craters, fields of boulders or similar difficult ground. Similarly, the terraforming efforts have created new challenges such as mudslides, sandstorms, flash floods, etc. The buggy\^aÄôs AI is capable of driving itself, and of using navigation systems, satellite mapping and weather tracking to avoid such obstacles, but such systems are not infallible. Circumventing this terrain may require a Pilot: Ground Test or creative thinking.
+
+
+ \textbf{Hostile Martians.}
+ The Martian wilderness is relatively unpopulated, but it is not unheard of for travelers to run across nomadic rural rusters who are hostile to interlopers or even outright brigands who will raid the characters for supplies.
+
+
+ \textbf{AI Relics.}
+ As noted above, dangerous TITAN-spawned machines still roam this area of Mars, attacking transhuman life. These may range from tank-like war machines bristling with weaponry to flying drones designed to decapitate transhumans and forcibly upload their minds.
+
+
+ 
+
+
+
+ Tweaks
+
+
+ Unknown to the characters, their actions are being tracked by the mysterious third party that attacked Gray Xu\^aÄôs ship. This surveillance is discreet, monitoring the characters via long-range spy drones and carefully concealed tracking devices, and following the characters\^aÄô trail through the Mesh. If the gamemaster wishes to increase the tension in this scene, they can give the characters a chance to notice this surveillance or even arrange a mishap that brings the characters face-to-face with their watchers.\^A†
+
+
+ 
+
+
+
+ Scene 4: Rumble in the Ruins
+
+
+ After a long journey, the characters finally reach their destination\^aÄîthe deserted remains of the Ebb 6 station. Their instructions are clear: find out how Gray Xu acquired the nanoswarm, locate any other remaining dangers and eliminate them.
+
+
+ 
+
+
+
+ Scouting the Habitat
+
+
+ Time has taken its toll on Ebb 6. Most of the damaged dome has been stripped away, leaving only a tattered framework and some remaining panels. Inside, approximately two dozen structures are half-buried in Martian sands. Most show obvious signs of damage from the attack that destroyed this settlement or the weather in the decade since. Inside some of the ruins lie the remains of the unfortunate former inhabitants\^aÄîsome possibly with intact cortical stacks.
+
+
+ Presumably the characters will carefully survey the ruins from a distance before rolling in. Any character who monitors the ruins for at least an hour and who makes a successful Perception Test will notice small signs of motion or activity, such as a flash of movement between two buildings, or a small servitor bot completing some task. Characters with enhanced vision can see in the dark, spot heat traces and even see through thin walls. It should quickly become apparent that someone inhabits the ruins, and that they\^aÄôre up to something.
+
+
+ If the characters stroll right in, give them a similar chance to notice such activity before they give themselves away. If they hide, allow them to make an Opposed Test, pitting their Infiltration skill against a Perception Test from one of their opponents. If the characters are spotted, they will be confronted by the small band of Night Cartel scavengers who are slowly but steadily unearthing a cache of weaponry left by the TITANs.
+
+
+ 
+
+
+
+ 
+
+
+
+ \textbf{Night Cartel Scavengers}
+
+
+
+ The scavenging group consists of 4 Night Cartel mobsters in ruster morphs. Gray Xu employed this team to continue searching the ruins after one of them discovered the nanoswarm canister here. To their delight, they found evidence of an entire cache of TITAN technology, buried in a bunker beneath one of the ruined structures. For several weeks, the scavengers have employed a number of servitor robots to carefully dig up the stash, wary of possible booby traps. Only recently have they gained access to the treasures within, which they are still carefully archiving and examining.
+
+
+ 
+
+
+
+ \textbf{The Cache}
+
+
+
+ The weapons depot left by the TITANs is small but potent. It contains a number of deactivated warbots, several sealed canisters of unactivated nanoswarms (similar to the one being sold by Gray Xu), several vats of unidentified chemical compounds, several items that are completely unrecognizable as to their purpose, and one antimatter explosive device (containing a minuscule amount of antimatter, but more than enough to destroy the whole settlement).
+
+
+ 
+
+
+
+ Party-Crashers Redux
+
+
+ At whatever point the gamemaster deems most appropriate for dramatic effect, the mysterious third party once again arrives and intervenes. If the players are taking too long to decide on a course of action, the gamemaster can use this event to spur them into motion. If they wandered in and find themselves captured or in a losing fight with the scavengers, this group may arrive just in time. If the characters have already dealt with the scavengers effectively, this event can catch them off guard, possibly forcing them to hole up in the ad-hoc bunker. Keep in mind that this third group has been tracking the characters, hoping they would lead them to the cache, which they did. They are likely to time their arrival in a way that benefits them best.
+
+
+ This time, the third party consists of four well-armed and armored grunts in buff olympian morphs. They arrive in their own buggy, which they leave parked at a safe distance out of sight, sneaking up using the rocky terrain as cover. Their mission is to seize the cache for themselves, call in backup to ship it out and kill anyone else involved. They are not interested in negotiating or taking prisoners.
+
+
+ This team also has an ace up their sleeve: a sniper drone. This AI-operated robot is essentially a small helicopter with a gun. It is instructed to keep a distance and back the four team members up if they run into difficulty. Spotting it from a distance will be difficult (\^aÄì30 to Perception Tests), and attacks made by or against it will suffer a similar long-range modifier.
+
+
+ 
+
+
+
+ \textbf{Running the Combat}
+
+
+
+ There are numerous ways in which this final scene can wrap up\^aÄîthe direction is entirely fluid and up to the actions of the characters and the ruthlessness of the gamemaster. It\^aÄôs highly likely that the characters will find themselves in a three-way fight, with one party holed up in the cache bunker and another caught in the crossfire.
+
+
+ Perhaps luckily for the characters, there is plenty of rocky terrain and ruined structures to use as cover, possibly turning the battle into a running game of cat-and-mouse. Characters can make ample use of their Infiltration skills to sneak around, their Perception skills to spot opponents, their Climbing skills to gain higher ground, their Freerunning skills to vault obstacles and otherwise move unimpeded, and their Fray skills to dodge and go on full defense.
+
+
+ The gamemaster is in control of both opposing forces, and so can choose to make the combat easier by having these opponents take each other out or more difficult by having each side maneuver and fight with intelligence and ruthlessness.
+
+
+ 
+
+
+
+ Dealing with the Cache
+
+
+ The characters\^aÄô ultimate goal is to capture or destroy the cache. If the characters are unable to beat their opponents in combat, their only choice is to try to keep anyone else from claiming it. The characters can go about this in two ways.
+
+
+ The first is to access the cache, peruse it and find the antimatter bomb. That device is more than capable of destroying the entire cache, and most of the ruins with it. Unfortunately, there is no easy way for the characters to set this bomb off remotely\^aÄîmeaning that one of them will need to set it off, dying in the process (perhaps requiring a WIL x 3 Test and inflicting 1d10 mental stress). If the characters think of it and the gamemaster allows it, a remote detonator or timing device can be jury-rigged to activate the bomb safely, but constructing this will require a Demolitions Test with a \^aÄì30 modifier and a timeframe of 30 minutes. In the heat of combat, the characters may not have enough time. Alternatively, one of the scavengers\^aÄô servitor bots could be hacked and instructed or remote-controlled to detonate the bomb once the characters are safely away.
+
+
+ The second option is to set off a smaller explosion in the cache room, which will breach the antimatter\^aÄôs containment device and cause that bomb to go off as well. This requires making some sort of improvised explosive (a Demolitions Test at \^aÄì30), crashing a vehicle into the cache or hacking the sniper or a servitor bot and crashing one of those into the cache. It is entirely possible that the characters might do this without realizing the antimatter bomb is within \^aÄ$|$.
+
+
+ Creative players may generate other ideas, such as using their nanofabricator to generate a corrosive compound to melt the cache (though this will also trigger the antimatter bomb when its container is breached). As a last resort, if the players have no other options and/or are losing to one of the other sides, they can place a call to Firewall and let the organization know of the cache\^aÄôs location and imminent danger. Through its network of agents, Firewall can look into some other method of dealing with the cache, such as sending a better-armed team or \^aÄúaccidentally\^aÄù dropping a large rock on the ruins from orbit. Any such actions will likely be of little comfort to the characters, however, who are on their own for the time being.
+
+
+ 
+
+
+
+ Aftermath
+
+
+ Whether or not the characters survive, Firewall will make an effort to retrieve their cortical stacks. This will not be possible for any characters caught in the antimatter blast\^aÄîtheir stacks have been atomized, and they will have to be restored from backup. If the characters were all slain or captured by one of the opposing teams, their cortical stacks may have been removed\^aÄîeither for interrogation purposes or to sell on the black market. Retrieving those stacks could become an adventure in itself.
+
+
+ One way or another, the Night Cartel will likely have lost their secret stash of profitable weaponry, but they have many other methods of making money. Whether or not Gray Xu managed to survive the nanoswarm and the destruction of her ship is up to the gamemaster.
+
+
+ The characters may be intrigued by the open question\^aÄîwho is this mysterious third party? If they happened to retrieve the cortical stacks from any of their slain opponents, they may have a chance to find out through some interrogative psychosurgery. Alternatively, Firewall may ask the characters to look into their attackers\^aÄô identity, worried that they may be dealing with some sort of rival organization.\^A†
+
+
+ 
+
+
+
+ Player Characters
+
+
+ Players may choose from one of the following four characters. Each character is listed twice. The first listing represents the character in the morph in which they start the scenario. The second represents the character after\^A† re-sleeving subsequent to the events of Scene 2. It is highly recommended that the gamemaster only use the first set of stats for the character in the beginning, and then switch to the stats with the second morph at the beginning of Scene 3.
+
+
+ 
+
+
+
+ \textbf{Stop! read this!}
+
+
+
+ If you\^aÄôre going to gamemaster (\^aÄúrun\^aÄù) the adventure, you need to read this section. But if you\^aÄôre going to play in the adventure, don\^aÄôt read it\^aÄîyou\^aÄôll ruin some of your fun.
+
+
+ \textbf{Gray Xu}
+
+
+
+  COG COO INT REF SAV SOM WIL
+
+
+ \textbf{ 15 15 20 15 20 15 15}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 5 35 7 30 6 70 1}
+
+
+
+ Reputation: @-Rep 35, c-Rep 40, g-Rep 60
+
+
+ Skills: Academics: Nanotechnology 45, Deception 55, Fray 50, Freefall 55, Freerunning 40, Perception 45, Persuasion 60, Protocol 55, Research 40
+
+
+ Implants: Basic BioMods, Basic Mesh Inserts, Cortical Stack, Grip Pads (+30 Climbing), Oxygen Reserve, Prehensile Feet, Spray Weapons 30
+
+
+ Gear: Body Armor (10/10), Shredder (Flechette Spray Weapon, SA/BF/FA, AP \^aÄì10, DV 2d10 + 5, ammo 100)
+
+
+ 
+
+
+
+ \textbf{Neo-Hominid Bodyguards}
+
+
+
+  COG COO INT REF SAV SOM WIL
+
+
+ \textbf{ 5 15 20 15 10 15 5}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 2 35 7 10 2 70 1}
+
+
+
+ Reputation: g-Rep 40
+
+
+ Skills: Climbing 50, Clubs 50, Fray 50, Freefall 40, Freerunning 40, Intimidation 70, Kinetic Weapons 45, Perception 25, Unarmed Combat 50
+
+
+ Implants: Basic BioMods, Basic Mesh Inserts, Cortical Stack, Cyberclaws (AP \^aÄì2, 1d10 + 5 DV)
+
+
+ Gear: Body Armor (10/10), Medium Kinetic Railgun Pistols (SA/BF/FA, AP \^aÄì5, DV 2d10 + 4, ammo 12)
+
+
+ \textbf{Unknown Attackers 
+ in Splicer Morphs (10)}
+
+
+
+  COG COO INT REF SAV SOM WIL 
+
+
+ \textbf{ 10 15 10 10 10 15 10}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 2 30 6 20 4 40 1}
+
+
+
+ Skills: Blades 30, Fray 40, Freefall 40, Freerunning 20, Intimidation 30, Kinetic Weapons 35, Perception 20, Unarmed Combat 40
+
+
+ Implants: Basic BioMods, Basic Mesh Inserts, Cortical Stack
+
+
+ Gear: Armor Clothing (4/4), Vibroblades (AP \^aÄì2, DV 2d10 +2), Medium Kinetic Pistols (SA/BF/FA, AP \^aÄì2, DV 2d10 + 2, ammo 12)
+
+
+ \textbf{Unknown Attackers in 
+ Olympian Morphs (4)}
+
+
+
+  COG COO INT REF SAV SOM WIL
+
+
+ \textbf{ 15 20 15 15 10 25 10}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 2 40 8 20 4 60 1}
+
+
+
+ Skills: Climbing 40, Clubs 20, Fray 35, Freerunning 50, Infiltration 30, Kinetic Weapons 40, Perception 40, Unarmed Combat 50
+
+
+ Implants: Basic BioMods, Basic Mesh Inserts, Cortical Stack
+
+
+ Gear: Standard Vacsuits (7/7), Chameleon Cloaks (+20 Infiltration), Kinetic SMGs (SA/BF/FA, AP \^aÄì2, DV 2d10 + 3, ammo 20)
+
+
+ 
+
+
+
+ \textbf{Sniper Bot}
+
+
+
+  COG COO INT REF SAV SOM WIL
+
+
+ \textbf{ 10 10 10 10 5 20 5}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 0 30 6 10 2 40 1}
+
+
+
+ Skills: Fray 20, Infiltration 20, Kinetic Weapons 40, Perception 30, Pilot: Aircraft 30
+
+
+ Gear: Armor 6/6, Kinetic Railgun Sniper Rifle (SA/BF/FA, AP \^aÄì15, DV 2d10 + 12, ammo 40)
+
+
+ \textbf{Night Cartel Scavengers (4)}
+
+
+
+  COG COO INT REF SAV SOM WIL
+
+
+ \textbf{ 10 10 15 10 10 15 10}
+
+
+
+  MOX DUR WT LUC TT INIT SPD
+
+
+ \textbf{ 2 35 7 20 4 50 1}
+
+
+
+ Skills: Academics: Archeology 20, Clubs 20, Fray 40, Freerunning 30, Hardware: Electronics 20, Hardware: Industrial 50, Infiltration 30, Kinetic Weapons 40, Perception 40, Unarmed Combat 30
+
+
+ Implants: Basic BioMods, Basic Mesh Inserts, Cortical Stack, Enhanced Respiration, Temperature Tolerance
+
+
+ Gear: Armor Clothing (4/4), Automatic Kinetic Rifles (SA/BF/FA, AP \^aÄì6,\^A† DV 2d10 + 6, ammo 30)
+
+\end{document}
